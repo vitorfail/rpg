@@ -21,20 +21,25 @@ import { useState } from "react";
 
 export default function Home() {
   const [descri, setdescri] = useState("")
-  const[pergaminho, setpergaminho] = useState("")
+  const[pergaminho, setpergaminho] = useState("Barbaro")
   const [arque, setarque] = useState("")
   const [imagem,setimagem] = useState("")
   const [popup,setpopup] = useState(false)
+  const [ proximo, setproximo] = useState(false)
+  const [ subclasse, setsubclasse] = useState("")
   function selecionar_classe(nome){
     setpergaminho(nome)
     setdescri(classes[nome].descri)
     setarque(classes[nome].arquetipo)
     setimagem(classes[nome].img)
+    setsubclasse(Object.keys(classes[nome].arquetipo)[0])
+    alert(classes[pergaminho].arquetipo["Caminho do guerreiro Totemico"].text)
+  }
+  function selecionar_arquetipo(nome){
+    setsubclasse(nome)
 
   }
-  const classes_menu =[
 
-  ]
   const classes ={
     "Barbaro":{
       descri:
@@ -42,9 +47,36 @@ export default function Home() {
         bastante poderosos, que utilizam da fúria que faz seu poder e força aumentarem em combate.
         Além de causarem muito dano, os Bárbaros também conseguem aguentar dano, sendo muitas vezes 
         os tanques da equipe, eles também podem sentir o perigo através dos seus sentidos.`,
-        arquetipo:`Caminho do guerreiro Totemico,\n Caminho do Berseker,
-         Caminho do Battlerager, Caminho do Guardião Ancestral, Caminho do Arauto Ancestral, Caminho do Zelote, Caminho da Besta,
-         Caminho da Magia Selvagem`,
+        arquetipo:{
+          "Caminho do guerreiro Totemico":{
+            text:`<p>Seu caminho é buscar a sintonia com o mundo natural, concedendo a você uma 
+              afinidade com as bestas. A partir do 3° nível, quando você toma esse caminho, 
+              você recebe a habilidade de conjurar as magias sentido bestial e falar com animais, 
+              mas apenas na forma de rituais. A partir do 3° nível, quando você adota esse caminho, 
+              você escolhe um totem espiritual e ganha suas características. 
+              Os totêns são <strong>Águia:</strong>, <strong>Urso</strong>, <strong>Lobo</strong> <br></br><br></br>
+              <strong>Águia:</strong> Quando estiver em fúria e não estiver vestindo uma armadura pesada, as outras 
+              criaturas terão desvantagem nas jogadas de 
+              ataque de oportunidade contra você e 
+              você pode usar a ação de Disparada como uma 
+              ação bônus no seu turno. O espirito da águia torna 
+              você um predador que pode vagar pelo meio da briga com facilidade. <br></br><br></br>
+              <strong>Lobo:</strong> Você ganha a sensibilidade predatória de um lobo. Você pode rastrear outras criaturas quando estiver 
+              viajando a passo rápido e você
+               pode se mover furtivamente quando estiver viajando a passo normal. <br></br><br></br>
+               <strong>Urso:</strong> Você ganha a força de um urso. Sua capacidade de carga (incluindo carga máxima e capacidade
+                de erguer) é dobrada e você tem vantagem em testes 
+               de Força realizados para empurrar, puxar, erguer ou quebrar objetos.
+               </p>`
+          },
+          "Caminho do Berseker":{ text:`testando`},
+          "Caminho do Battlerager":{ text:``},
+          "Caminho do Guardião Ancestral":{ text:``},
+          "Caminho do Arauto Ancestral":{ text:``},
+          "Caminho do Zelote":{ text:``},
+          "Caminho da Besta":{ text:``},
+          "Caminho da Magia Selvagem":{ text:``}
+        },
          img:Barbaro
     },
     "Artifice":{
@@ -55,17 +87,28 @@ export default function Home() {
         Enquanto classes de combate utilizam armas corpo a corpo e 
         classes conjuradoras usa a magia, o Artífice auxiliará sua equipe usando armas de fogo, bombas e até mesmo 
         autômatos para o auxiliar em combate.`,
-      arquetipo: "Alquimista, Artilheiro, Ferreiro de Batalha, Ameiro",
+      arquetipo:{
+        "Alquimista":{ text:``},
+        "Artilheiro":{ text:``},
+        "Ferreiro de Batalha":{ text:``},
+        "Ameiro":{ text:``}
+      },
       img:Artifice
     },
     "Bardo":{
       descri:`Artistas conhecedores das histórias do mundo, Bardos são capazes de realizar magia a partir de suas 
       obras, seja com música, pintura ou até mesmo um breve discurso. Bardos são especialistas na manipulação 
       não apenas mágica, mas também em tocar o coração dos alvos das mais variadas formas a partir de suas técnicas.`,
-      erquetipo:`Escola de Lore,
-      Escola do Valor, Escola do Glamour, 
-      Escola das Espadas, Escola dos Sussurros, 
-      Escola da Eloquência, Escola da Criação, Escola dos Espíritos,`,
+      arquetipo:{
+        "Escola de Lore":{ text:``},
+        "Escola do Valor":{ text:``},
+        "Escola do Glamour":{ text:``},
+        "Escola das Espadas":{ text:``},
+        "Escola dos Sussurros":{ text:``},
+        "Escola da Eloquência":{ text:``},
+        "Escola da Criação":{ text:``},
+        "Escola dos Espíritos":{ text:``}
+    },
       img:Bardo
     },
     "Bruxo":{
@@ -73,14 +116,17 @@ export default function Home() {
        o suficiente para adquirir poder e, a partir de um pacto, você foi um deles.
       Bruxos se tornam conjuradores arcanos a partir de pactos o que lhes dão além 
       das magias capacidades únicas e úteis tanto ofensivamente, quanto para suporte.`,
-      arquetipo:`A Arquifada,
-      O Demônio,
-      O Grande Velho,
-      O Imortal,
-      O Celeste,
-      A Lâmina Hexagonal,
-      O Insondável, O Gênio,
-      O morto-vivo`,
+      arquetipo:{
+        "A Arquifada":{ text:``},
+        "O Demônio":{ text:``},
+        "O Grande Velho":{ text:``},
+        "O Imortal":{ text:``},
+        "O Celeste":{ text:``},
+        "A Lâmina Hexagonal":{ text:``},
+        "O Insondável":{ text:``},
+        "O Gênio":{ text:``},
+        "O morto-vivo":{ text:``}
+    },
       img:Bruxo
     },
     "Clerigo":{
@@ -89,14 +135,21 @@ export default function Home() {
       Dependendo do cenário utilizado, podem tomar as mais variadas formas,
        pois seus poderes e motivações são ligados a cosmogonia de cada universo, 
        indo de servos de deuses bondosos ou completamente malignos.`,
-       arquetipo:`
-       Domínio do Conhecimento Domínio da Vida,
-        Domínio Leve,
-        Domínio da Natureza, Domínio da Tempestade, Domínio da Enganação, Domínio da Guerra,
-        Domínio da Morte,
-        Domínio Arcano, Domínio Forja,
-        Domínio Sepultura,
-        Domínio de Ordem, Domínio de Paz, Domínio Crepuscular`,
+       arquetipo:{
+        "Domínio do Conhecimento":{ text:``},
+        "Domínio da Vida":{ text:``},
+        "Domínio Leve":{ text:``},
+        "Domínio da Natureza":{ text:``},
+        "Domínio da Tempestade":{ text:``},
+        "Domínio da Enganação":{ text:``},
+        "Domínio da Guerra":{ text:``},        
+        "Domínio da Morte":{ text:``},
+        "Domínio Arcano, Domínio Forja":{ text:``},
+        "Domínio Sepultura":{ text:``},
+        "Domínio de Ordem":{ text:``},
+        "Domínio de Paz, Domínio Crepuscular":{ text:``}
+
+       },
         img:Clerigo
     },
     "Druida":{
@@ -104,25 +157,30 @@ export default function Home() {
       capaz de controlá-la ou tornar-se parte dela como animais, monstros e plantas diversas.
       Druidas misturam a versatilidade de quem controla a natureza, mas também as penalidades de
        quem não aceita a evolução trazida pela sociedade que afeta e muitas vezes destrói a origem de seus poderes.`,
-       arquetipo:`Círculo Druida da Terra,
-       Círculo Druida da Lua,
-       Círculo dos Sonhos,
-       Círculo do Pastor,
-       Círculo de Esporos, Círculo de Estrelas,
-       Círculo de Fogo Selvagem`,
+       arquetipo:{
+        "Círculo Druida da Terra":{ text:``},
+        "Círculo Druida da Lua":{ text:``},
+        "Círculo dos Sonhos":{ text:``},        
+        "Círculo do Pastor":{ text:``},        
+        "Círculo de Esporos":{ text:``},
+        "Círculo de Estrelas":{ text:``},
+        "Círculo de Fogo Selvagem":{ text:``}
+       },
        img:Druida
     },
     "Guardiao":{
       descri:`Também chamado de Ranger em outras edições, os Guardiões são especialistas em terrenos e alvos específicos.
       O Guardião é um aliado versátil e um inimigo mortal capaz de atravessar a natureza selvagem com 
       facilidade e caçar seus inimigos marcados com técnica e eficiência.`,
-      arquetipo:`Caçador,
-      Fera,
-      Horizonte Walker,
-      Matador de Monstros,
-      Perseguidor da escuridão,
-      Fey Andarilho,
-      Enxameador`,
+      arquetipo: {
+        "Caçador":{ text:``},
+        "Fera":{ text:``},
+        "Horizonte Walker":{ text:``},
+        "Matador de Monstros":{ text:``},
+        "Perseguidor da escuridão":{ text:``},
+        "Fey Andarilho":{ text:``},
+        "Enxameador":{ text:``}
+      },
       img:Guardiao
     },
     "Guerreiro":{
@@ -131,16 +189,19 @@ export default function Home() {
        que não entrem nas demais categorias.
       Um guerreiro é tecnicamente a classe mais simples para novatos e uma das mais versáteis, 
       capaz de se manter diversificado ou se especializar no uso de uma arma ou manobra específica.`,
-      arquetipo:`Mestre de batalha,
-      Campeão,
-      Cavaleiro Ancião,
-      Cavaleiro Dragão Roxo,
-      Samurai,
-      Cavalheiro,
-      Arcano
-      ,Eco Cavaleiro,
-      Guerreiro Psíquico,
-      Guerreiro Cavaleiro Rúnico`,
+      arquetipo:{
+        "Mestre de batalha":{ text:``},
+        "Campeão":{ text:``},
+        "Cavaleiro Ancião":{ text:``},
+        "Cavaleiro Dragão Roxo":{ text:``},
+        "Samurai":{ text:``},
+        "Cavalheiro":{ text:``},
+        "Arcano":{ text:``},
+        "Eco Cavaleiro":{ text:``},
+        "Guerreiro Psíquico":{ text:``},
+        "Guerreiro Cavaleiro Rúnico":{ text:``},
+      }
+      ,
       img:Guerreiro
     },
     "Ladino":{
@@ -150,12 +211,18 @@ export default function Home() {
       Ladinos possuem um conjunto próprio de técnicas focadas em arrombamento, 
       manuseio de armadilhas, escalada, furto e técnicas que peguem o alvo desprevenido que sim, podem ser usadas para o mau caso queiram, 
       mas também criam exploradores e aventureiros vitais para qualquer grupo dentro e fora de masmorras.`,
-      arquetipo:`Malandro Arcano, Assassino,
-      Ladrão,
-      Cérebro, Espadachim, Inquisitivo,
-      Escoteiro,
-      Fantasma,
-      Faca da Alma`,
+      arquetipo:{
+        "Malandro Arcano":{ text:``},
+        "Assassino":{ text:``},
+        "Ladrão":{ text:``},
+        "Cérebro":{ text:``}, 
+        "Espadachim":{ text:``}, 
+        "Inquisitivo":{ text:``},
+        "Escoteiro":{ text:``},
+        "Fantasma":{ text:``},
+        "Faca da Alma":{ text:``},
+
+      },
       img:Ladino
     },
     "Monge":{
@@ -163,16 +230,17 @@ export default function Home() {
       O Monge é uma classe que foca sua força em rajadas de múltiplos ataques desarmados cada vez 
       mais fortes, além de técnicas que misturam artes marciais com o consumo de Chi, uma energia 
       que apenas ele possui no jogo.`,
-      arquetipo:`
-        Ordem dos Escribas, 
-        Caminho da Mão Aberta,
-        Caminho da Sombra,
-        Caminho dos Quatro Elementos,
-        Caminho da Longa Morte,
-        Caminho da Alma do Sol,
-        Caminho do Mestre Bêbado,
-        Caminho do Kensei, Caminho da Misericórdia,
-        Caminho do Eu Astral`,
+      arquetipo:{
+        "Ordem dos Escribas":{ text:``}, 
+        "Caminho da Mão Aberta":{ text:``},
+        "Caminho da Sombra":{ text:``},
+        "Caminho dos Quatro Elementos":{ text:``},
+        "Caminho da Longa Morte":{ text:``},
+        "Caminho da Alma do Sol":{ text:``},
+        "Caminho do Mestre Bêbado":{ text:``},
+        "Caminho do Kensei, Caminho da Misericórdia":{ text:``},
+        "Caminho do Eu Astral":{ text:``},
+      },
         img:Monge
     },
     "Mago":{
@@ -181,18 +249,21 @@ export default function Home() {
 
       Magos misturam os diferentes caminhos da magia com as restrições de precisar decorá-las
        diariamente, um equilíbrio que torna o Mago poderoso, mas também uma posição complexa para qualquer equipe.`,
-      arquetipo:`
-        Escola de Abjuração,
-        Escola de Conjuração,
-        Escola de Adivinhação,
-        Escola de Encantamento,
-        Escola de Evocação, Escola de Ilusão, Escola de Necromancia,
-        Escola de Transmutação,
-        Canto de lâminas,
-        Magia de Guerra,
-        Cronurgista,
-        Graviturgista,
-        Ordem dos Escribas`,
+      arquetipo:{
+        "Escola de Abjuração":{ text:``},
+        "Escola de Conjuração":{ text:``},
+        "Escola de Adivinhação":{ text:``},
+        "Escola de Encantamento":{ text:``},
+        "Escola de Evocação":{ text:``}, 
+        "Escola de Ilusão":{ text:``}, 
+        "Escola de Necromancia":{ text:``},
+        "Escola de Transmutação":{ text:``},
+        "Canto de lâminas":{ text:``},
+        "Magia de Guerra":{ text:``},
+        "Cronurgista":{ text:``},
+        "Graviturgista":{ text:``},
+        "Ordem dos Escribas":{ text:``},
+      }, 
         img:Mago
     },
     "Paladino":{
@@ -201,14 +272,17 @@ export default function Home() {
       mas independente da forma, sempre serão lembrados por quem testemunhar seus poderes.
       Paladinos misturam o uso de armas e armaduras pesadas, montarias
        e poderes divinos advindos de um voto ou código de honra.`,
-       arquetipo:`
-        Juramento de Devoção, Juramento dos Antigos,
-        Juramento da Vingança,
-        Perjuro,
-        Juramento da Coroa, Juramento da Conquista,
-        Juramento de Redenção,
-        Juramento de Glória,
-        Juramento dos Vigilantes`,
+       arquetipo:{
+        "Juramento de Devoção":{ text:``}, 
+        "Juramento dos Antigos":{ text:``},
+        "Juramento da Vingança":{ text:``},
+        "Perjuro":{ text:``},
+        "Juramento da Coroa":{ text:``}, 
+        "Juramento da Conquista":{ text:``},
+        "Juramento de Redenção":{ text:``},
+        "Juramento de Glória":{ text:``},
+        "Juramento dos Vigilantes":{ text:``}
+      },
         img:Paladino
     },
   }
@@ -229,69 +303,59 @@ export default function Home() {
           </div>
         </div>
         <div className="inicio">
-          <div className="menu">
+          <div id={proximo?"":"menu"} className="menu">
             <div className="classes">
               <p className="titulo">Classes</p>
-              <Image src={Linha} width={100} height={70}></Image>
-              <div className="lista">
-                <div className="item" id={pergaminho=="Artifice"?"show": ""} onClick={()=> selecionar_classe("Artifice")} >
-                  <Image src={Artifice} width={80} height={80}layout="fixed" ></Image>
-                  <p>Artifice</p>
-                </div>
-                <div className="item" id={pergaminho=="Barbaro"?"show": ""} onClick={()=> selecionar_classe("Barbaro")} >
-                  <Image src={Barbaro} width={80} height={80}layout="fixed" ></Image>
-                  <p>Barbaro</p>
-                </div>
-                <div className="item" id={pergaminho=="Bardo"?"show": ""} onClick={()=> selecionar_classe("Bardo")} >
-                  <Image src={Bardo} width={80} height={80} layout="fixed"></Image>
-                  <p>Bardo</p>
-                </div>
-                <div className="item" id={pergaminho=="Bruxo"?"show": ""} onClick={()=> selecionar_classe("Bruxo")} >
-                  <Image src={Bruxo} width={80} height={80} layout="fixed"></Image>
-                  <p>Bruxo</p>
-                </div>
-                <div className="item" id={pergaminho=="Clerigo"?"show": ""} onClick={()=> selecionar_classe("Clerigo")} >
-                  <Image src={Clerigo} width={70} height={70}></Image>
-                  <p>Clerigo</p>
-                </div>
-                <div className="item" id={pergaminho=="Druida"?"show": ""} onClick={()=> selecionar_classe("Druida")} >
-                  <Image src={Druida} width={70} height={70}></Image>
-                  <p>Druida</p>
-                </div>
-                <div className="item" id={pergaminho=="Guardiao"?"show": ""} onClick={()=> selecionar_classe("Guardiao")} >
-                  <Image src={Guardiao} width={70} height={70}></Image>
-                  <p>Guardião</p>
-                </div>
-                <div className="item" id={pergaminho=="Guerreiro"?"show": ""} onClick={()=> selecionar_classe("Guerreiro")} >
-                  <Image src={Guerreiro} width={70} height={70}></Image>
-                  <p>Guerreiro</p>
-                </div>
-                <div className="item" id={pergaminho=="Ladino"?"show": ""} onClick={()=> selecionar_classe("Ladino")} >
-                  <Image src={Ladino} width={70} height={70}></Image>
-                  <p>Ladino</p>
-                </div>
-                <div className="item" id={pergaminho=="Paladino"?"show": ""} onClick={()=> selecionar_classe("Paladino")} >
-                  <Image src={Paladino} width={70} height={70}></Image>
-                  <p>Paladino</p>
-                </div>
-                <div className="item" id={pergaminho=="Mago"?"show": ""} onClick={()=> selecionar_classe("Mago")} >
-                  <Image src={Mago} width={70} height={70}></Image>
-                  <p>Mago</p>
-                </div>
-                <div className="item" id={pergaminho=="Monge"?"show": ""} onClick={()=> selecionar_classe("Monge")} >
-                  <Image src={Monge} width={70} height={70}></Image>
-                  <p>Monge</p>
-                </div>
+              <Image alt="icon" src={Linha} width={100} height={70}></Image>
+              <div className="lista">{
+                Object.keys(classes).map((item, key) => (
+                  <div key={key} className="item" id={pergaminho==item?"show": ""} onClick={()=> selecionar_classe(item)} >
+                    <Image alt="icon" src={classes[item].img} width={80} height={80}layout="fixed" ></Image>
+                    <p>{item}</p>
+                  </div>
+                ))
+              }
               </div>
               <div className="button">
-                  <button onClick={() => setpopup(true)} >Escolher</button>
+                  <button onClick={() => setproximo(true)} >Proximo</button>
+              </div>
+            </div>
+            <div className="descri">
+              <Image alt="icon" src={imagem} width={100} height={100}/>
+              <p>Descrição</p>
+              <p>{descri}</p>
+              <p>Sub-Classes:</p>
+              {pergaminho ===""?"":
+              Object.keys(classes[pergaminho].arquetipo).map((item, key) => (<p key={key}><strong>{item}</strong></p>))}
+            </div>
+          </div>
+          <div id={proximo?"menu":""} className="menu">
+            <div className="classes">
+              <p className="titulo">Subclasses de {pergaminho}</p>
+              <Image alt="icon" src={Linha} width={100} height={70}></Image>
+              <div className="lista">
+                {
+                  Object.keys(classes[pergaminho].arquetipo).map((item, key) => (
+                    <div key={key} className="item" id={subclasse==item?"show": ""} onClick={()=> selecionar_arquetipo(item)} >
+                      <Image alt="icon" src={classes[pergaminho].img} width={80} height={80}layout="fixed" ></Image>
+                      <p>{item}</p>
+                    </div>
+                  ))
+                }
+              </div>
+              <div className="botoes">
+                <div  className="button">
+                    <button id="n" onClick={() => setproximo(false)} >Voltar</button>
+                </div>
+                <div className="button">
+                    <button onClick={() => setpopup(true)} >Proximo</button>
+                </div>
               </div>
             </div>
             <div className="descri">
               <Image  src={imagem} width={100} height={100}/>
               <p>Descrição</p>
-              <p>{descri}</p>
-              <p>Arquetipos: <strong>{arque}</strong></p>
+              <p>{(classes[pergaminho].arquetipo)["Caminho do guerreiro Totemico"].text}</p>
             </div>
           </div>        
         </div>
