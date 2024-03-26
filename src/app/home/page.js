@@ -55,6 +55,12 @@ export default function Home() {
               mas apenas na forma de rituais. A partir do 3° nível, quando você adota esse caminho, 
               você escolhe um totem espiritual e ganha suas características. 
               Os totêns são <strong>Águia:</strong>, <strong>Urso</strong>, <strong>Lobo</strong> <br></br><br></br>
+
+              <strong>Nível 3 - Totem Espíritual:</strong>  Escolha um espírito animal; você recebe a habilidade relacionada a ele. Seu totem 
+              deve ser um animal relacionado aos listados aqui, mas 
+              você pode escolher um mais apropriado a sua terra natal. Por exemplo, você poderia escolher um falcão 
+              ou abutre ao invés da águia, uma pantera ou onça ao invés do tigre, e assim por diante.<br></br><br></br>
+
               <strong>Águia:</strong> Quando estiver em fúria e não estiver vestindo uma armadura pesada, as outras 
               criaturas terão desvantagem nas jogadas de 
               ataque de oportunidade contra você e 
@@ -67,6 +73,22 @@ export default function Home() {
                <strong>Urso:</strong> Você ganha a força de um urso. Sua capacidade de carga (incluindo carga máxima e capacidade
                 de erguer) é dobrada e você tem vantagem em testes 
                de Força realizados para empurrar, puxar, erguer ou quebrar objetos.
+               <strong>Nivel 6 - Aspecto da Besta:</strong>  Você adquire um benefício místico baseado no totem escolhido. Você 
+               pode optar pelo mesmo animal que selecionou no 3° nível ou um diferente. <br></br><br></br>
+               • Águia: Você pode enxergar a uma milha (1,6 Km) sem dificuldade, sendo capaz de discernir 
+               até os menores detalhes quando estiver olhando para algo a menos de 30 metros de você. 
+               Além disso, penumbra não impõem desvantagem nos seus testes de Sabedoria (Percepção).<br></br><br></br>
+
+              <strong>Lobo:</strong> Você pode rastrear outras criaturas quando estiver viajando a passo rápido e pode se 
+              mover furtivamente quando estiver viajando a passo normal.<br></br><br></br>
+
+            <strong>Urso:</strong>   Sua capacidade de carga (incluindo carga máxima e capacidade de erguer) é dobrada e você 
+            tem vantagem em testes de Força realizados para empurrar, puxar, erguer ou quebrar objetos.<br></br><br></br>
+
+            <strong>Cervo:</strong>  Seja montado ou a pé, seu ritmo de caminhada é dobrado. Até 10 companheiros em até 18 metros 
+            de você também recebem esse benefício se você não estiver incapacitado.<br></br><br></br>
+
+            <strong>Tigre:</strong> Recebe proficiência em duas perícias entre Acrobacia, Atletismo, Furtividade e Sobrevivência.<br></br><br></br>
                </p>]
           },
           "Caminho do Berseker":{ text:[<p className="arquetipo">
@@ -74,20 +96,20 @@ export default function Home() {
              é banhado em sangue e violência. Conforme entra em fúria, ele se joga sobre seus inimigos vibrando 
              no caos da batalha, sem se preocupar com sua segurança ou bem-estar, focando-se apenas na destruição
               de seus inimigos. <br></br><br></br>
-          <strong>Frenesi:</strong> Sempre que entra em Fúria pode escolher entrar em Frenesi. Durante 
+          <strong>Nivel 3 - Frenesi:</strong> Sempre que entra em Fúria pode escolher entrar em Frenesi. Durante 
           um Frenesi você pode fazer um único ataque com arma, com uma Ação Bônus, em cada um de seus turnos 
           após esse. Quando o frenesi acabar você sofre um nível de exaustão.<br></br><br></br>
 
-        <strong>Fúria sem Mente:</strong> Você não pode ser Encantado ou Assustado durante uma Fúria. Caso 
+        <strong>Nivel 6 - Fúria sem Mente:</strong> Você não pode ser Encantado ou Assustado durante uma Fúria. Caso 
         esteja Encantado ou Assustado, ao entrar em Fúria o efeito é suspenso pela sua duração.<br></br><br></br>
 
-        <strong>Presença Intimidadora:</strong> Você pode rugir ameaçadoramente a uma criatura a até 9m. 
+        <strong>Nível 10 - Presença Intimidadora:</strong> Você pode rugir ameaçadoramente a uma criatura a até 9m. 
         O alvo deve passar em resistência de SAB (CD = 8 + bônus de proficiência + modificador de Carisma) ou 
         ficar Assustado por 1 turno. Em turnos seguintes você pode estender o efeito por mais um turno gastando
          uma ação. Esse efeito acaba caso alvo termine seu turno sem linha de visão ou a mais de 18m de você.
           Um alvo que passe no teste torna-se imune ao efeito por 24h.<br></br><br></br>
 
-        <strong>Retaliação:</strong> Sempre que sofrer dano de uma criatura adjacente ao 
+        <strong>Nível 14 - Retaliação:</strong> Sempre que sofrer dano de uma criatura adjacente ao 
         seu personagem, você pode usar sua Reação para realizar um ataque corpo-a-corpo com arma contra ela.
           </p>]},
           "Caminho do Battlerager":{ text:[<p className="">
@@ -97,7 +119,7 @@ export default function Home() {
             qual eles se entregam a fúria do combate e lançam-se sobre seus adversários, transformando seus próprios 
             corpos em armas letais. <br></br><br></br>
 
-        <strong>Fúria com Armadura:</strong> A partir do 3º nível, você ganha à habilidade de usar a Armadura de
+        <strong>Nível 3 - Fúria com Armadura:</strong> A partir do 3º nível, você ganha à habilidade de usar a Armadura de
         Espinhos como uma arma (veja descrição do item abaixo). Enquanto estiver usando essa armadura sob
           o efeito da Fúria, você pode usa-la para fazer um ataque corpo a corpo contra um alvo adjacente a você 
           como uma ação bônus. Se o ataque acertar, os espinhos infligem 1D4 de dano perfurante, mais seu modificador
@@ -109,14 +131,14 @@ export default function Home() {
        metal. AC: 14 + modificador de Destreza (Max 2), Furtividade: Desvantagem, Peso: 45 lbs (20kg) e 
        Custo: 75 Peças de Ouro.<br></br><br></br>
 .
-      <strong>Vivacidade Imprudente:</strong> A partir do 6º nível, quando você usa Ataque Descuidado
+      <strong>Nível 6 - Vivacidade Imprudente:</strong> A partir do 6º nível, quando você usa Ataque Descuidado
        enquanto estiver em fúria, você também ganha pontos de vida temporários igual ao seu modificador 
        de Constituição (Mínimo de 1). Eles somem se qualquer um deles restar quando a Fúria terminar.<br></br><br></br>
 
-      <strong>Investida Furiosa:</strong> No 10º nível, você pode tomar a ação Disparada como uma ação
+      <strong>Nível 10 - Investida Furiosa:</strong> No 10º nível, você pode tomar a ação Disparada como uma ação
       bônus enquanto estiver em fúria.<br></br><br></br>
 
-      <strong>Retribuição Farpada:</strong> A partir do nível 14, quando uma criatura adjacente a você acerta-lo 
+      <strong>Nivel 14 - Retribuição Farpada:</strong> A partir do nível 14, quando uma criatura adjacente a você acerta-lo 
       com um ataque corpo a corpo, o atacante sofre 3 de dano perfurante se você estiver em fúria, não estiver 
       incapacitado e estiver vestindo a Armadura de Cravos.
           </p>]},
@@ -126,24 +148,24 @@ export default function Home() {
             Quando um bárbaro que segue este caminho entra em 
             fúria, o bárbaro entra em contato com o mundo espiritual e convida esses espíritos guardiões para ajudar.<br></br><br></br>
 
-            <strong>Protetor Ancestral:</strong>  Enquanto estiver em em Fúria, a primeira criatura que acertar com um ataque em seu
+            <strong>Nivel 3 - Protetor Ancestral:</strong>  Enquanto estiver em em Fúria, a primeira criatura que acertar com um ataque em seu
              turno se torna alvo dos espíritos guerreiros. Até o início do seu próximo turno, esse alvo tem desvantagem 
              em qualquer jogada de ataque que não seja contra você, e quando o alvo atingir uma criatura
               diferente de você com um ataque, essa criatura tem resistência ao dano causado pelo ataque. O efeito
                sobre o alvo acaba mais cedo se sua fúria terminar.<br></br><br></br>
 
-              <strong>Escudo Espiritual:</strong>  Os guardiães espirituais que te protegem podem prover uma defesa 
+              <strong>Nivel 6 - Escudo Espiritual:</strong>  Os guardiães espirituais que te protegem podem prover uma defesa 
               sobrenatural para aqueles que você defende. Se você estiver em fúria e outra criatura que 
               possa ver a até 9 metros receba dano, você pode usar sua reação para reduzir esse dano em 2d6. 
               Esse valor aumenta para 3d6 ao nível 10 e 4d6 ao 14.<br></br><br></br>
 
-              <strong>Consultar os Espíritos:</strong>  Você ganha a habilidade de se consultar com seus espíritos ancestrais. 
+              <strong>Nivel 10 - Consultar os Espíritos:</strong>  Você ganha a habilidade de se consultar com seus espíritos ancestrais. 
               Uma vez por Descanso Longo, você pode usar Augúrio ou Clarividência, sem precisar de um espaço 
               de magia ou componentes materiais. Em vez de criar um sensor esférico, esse uso de clarividência
                invoca invisivelmente um de seus espíritos ancestrais para o local escolhido. Sabedoria é seu
                 atributo chave de conjuração.<br></br><br></br>
 
-              <strong>Ancestrais Vingativos:</strong>  Seus espíritos ancestrais aumentam seu poder o suficiente para conseguir 
+              <strong>Nivel 14 - Ancestrais Vingativos:</strong>  Seus espíritos ancestrais aumentam seu poder o suficiente para conseguir 
               retaliar. Quando você usa seu Escudo Espiritual para reduzir o dano de um ataque, o atacante recebe 
               uma quantidade de dano de energia igual ao dano que seu escudo espiritual reduziu
           </p> ]},
@@ -151,7 +173,7 @@ export default function Home() {
             Seguidores desse caminho aprendem a converter sua fúria em um véu de energia primordial, 
             tocando a natureza para destruir seus inimigos.<br></br><br></br>
 
-            <strong>Fúria da Tempestade:</strong>  Quando em Fúria você emana uma aura de 3m. Escolha um terreno; 
+            <strong>Nivel 3 - Fúria da Tempestade:</strong>  Quando em Fúria você emana uma aura de 3m. Escolha um terreno; 
             você recebe a habilidade relacionada a ele. Essa habilidade ativa quando entra em Fúria, e 
             pode ativá-la novamente a cada turno com uma ação bônus. Você pode trocar o terreno ao subir de 
             nível nessa classe.<br></br><br></br>
@@ -165,7 +187,7 @@ export default function Home() {
           <strong>Tundra:</strong> Criaturas de sua escolha na aura recebem 2 PV temporários. Esse valor aumenta para
            3 ao nível 5, 4 ao 10, 5 ao 15, e 6 ao nível 20.<br></br><br></br>
 
-          <storng>Alma da Tempestade:</storng> Você recebe a habilidade relacionada ao terreno que escolheu 
+          <storng>Nivel 6 - Alma da Tempestade:</storng> Você recebe a habilidade relacionada ao terreno que escolheu 
           ao nível 3. Essas habilidades funcionam fora de Fúria.<br></br><br></br>
 
           <strong>Deserto:</strong> Recebe Resistência a dano de Fogo, e não sofre efeito de calor extremo. Com 
@@ -179,7 +201,7 @@ export default function Home() {
           10 - Escudo da Tempestade: Quando em Fúria, aliados dentro de sua aura recebem a
            resistência à dano garantida por sua Alma da Tempestade.<br></br><br></br>
 
-          <strong>Tempestade Furiosa:</strong> Você recebe a habilidade relacionada ao terreno que escolheu 
+          <strong>Nivel 14 - Tempestade Furiosa:</strong> Você recebe a habilidade relacionada ao terreno que escolheu 
           ao nível 3. Testes de resistência são baseados em CON.<br></br><br></br>
 
           <strong>Deserto:</strong> Quando acertado por um ataque, com uma reação força resistência de DES. Oponente
@@ -193,9 +215,92 @@ export default function Home() {
           0 até o começo de seu próximo turno.
 
           </p>]},
-          "Caminho do Zelote":{ text:``},
-          "Caminho da Besta":{ text:``},
-          "Caminho da Magia Selvagem":{ text:``}
+          "Caminho do Zelote":{ text:[
+            <p> Seguidores desse caminho seguem desígnios divinos que inspiram violência e zelo em combate.<br></br><br></br>
+
+           <strong>Nivel 3 - Fúria Divina:</strong> Quando em Fúria, a primeira criatura que acerta com um ataque armado em seu turno
+             sofre +1d6+1/2 seu nível de bárbaro. Esse dano é necrótico ou radiante, sua escolha ao receber essa 
+             habilidade.<br></br><br></br>
+            
+            <strong>Nivel 3 - Guerreiro dos Deuses:</strong> Quando conjuram uma magia que lhe trás de volta à vida (mas não não-vida), o
+             conjurador não precisa gastar componentes materiais.<br></br><br></br>
+
+            <strong>Nivel 6 - Foco Zeloso:</strong> Quando em Fúria, caso falhe em um teste de resistência pode re-rolar o teste. 
+            Essa habilidade só pode ser usada uma vez por Fúria. <br></br><br></br>
+            
+            <strong>Nivel 10 - Presença Zelosa:</strong> Uma vez por Descanso Longo, com uma ação bônus você garante a até 10 aliados
+             a até 18m Vantagem em ataques e testes de resistência até o começo de seu próximo turno. Essa habilidade 
+             é recuperada com um Descanso Longo.<br></br><br></br>
+            
+            <strong>Nivel 14 - Fúria Além da Vida:</strong> Quando estiver em Fúria, você não fica inconsciente em 0 ponto de vida. 
+            Você ainda deve passar em testes de resistência de morte, e sofre efeitos normais por sofrer dano 
+            nesse estado. Independente dos resultados, você não morre até que sua Fúria termine, e quando ela 
+            termina você só morre caso ainda esteja em 0 pontos de vida.</p>
+          ]},
+          "Caminho da Besta":{ text:[
+            <p className="arquetipo">
+              Seguidores desse caminho extraem sua fúria de uma faísca bestial que queima dentro de
+               suas almas. Esta fera uiva para ser liberada e irrompe em uma fúria agonizante.
+
+              <strong>Nivel 3 - Forma da Fera:</strong> Quando em Fúria, manifesta uma das qualidades abaixo, que contam como armas simples:
+                <br></br>
+              - Mordida: Causa 1d8 perfurante. Uma vez por turno quando acerta mordida, cura Prof, 
+              desde que com ½ PV ou menos.<br></br>
+              - Garras: Causa 1d6 cortante. Uma vez por turno quando acerta garra, pode fazer outro ataque de 
+              garra como parte da ação.<br></br>
+              - Rabo: Causa 1d8 perfurante, e tem propriedade Alcance. Quando acertado por criatura visível a até 
+              3m, com reação adiciona 1d8 à sua CA.<br></br><br></br>
+
+              <strong>Nivel 6 - Alma Feral:</strong> Suas armas naturais de Forma de Fera contam como mágicas.
+              Adicionalmente, recebe um dos seguintes benefícios, que podem ser trocados com Descanso Curto.<br></br>
+              -Deslocamento de nado igual terrestre, e Anfíbio.
+              -Deslocamento de escalada igual terrestre.
+              -Quando salta rola Atletismo, e cobre Resultado x 0,3m a mais.<br></br><br></br>
+
+              <strong>Nivel 10 - Fúria Infecciosa:</strong>  Prof vezes por dia, quando acerta alvo com arma natural, 
+              deve passar em resistência de SAB (baseada em CON) ou sofrer um efeito abaixo:<br></br>
+              -Usa reação para atacar alvo visível de sua escolha.<br></br>
+              -Sofre 2d12 psíquico.<br></br><br></br>
+
+              <strong>Nivel 14 - Chamado Da Caçada:</strong>  Prof vezes por Descanso Longo, quando entra em fúria até CON 
+              aliados a até 9m podem causar +1d6 para dano de um ataque uma vez por turno cada. Você recebe 
+              5PV temporário por aliado que beneficiou.
+            </p>
+          ]},
+          "Caminho da Magia Selvagem":{ text:[<p className="arquetipo">
+            Bárbaros que seguem esse caminho são um urro retumbante por liberdade, uma explosão de expressão 
+            manifestando-se de maneiras imprevisíveis.<br></br><br></br>
+
+            <strong>Nivel 3 - Percepção Mágica:</strong> Prof vezes por dia, com uma ação beneficia-se de efeito similar à Detectar Magia até 
+            o fim de seu próximo turno.<br></br><br></br>
+
+            <strong>Nivel 3 - Surto Selvagem:</strong>  Quando entra em fúria, role abaixo para determinar o efeito 
+            mágico produzido. Todos são baseados em CON.<br></br><br></br>
+
+            -1: Alvos à escolha a até 9m sofrem 1d12 necrótico (CON nega), e você
+            ganha 1d12+Nível pontos de vida temporários.<br></br>
+            -2: Se teleporta a até 9m em um lugar desocupado visível. Pela duração da 
+            Fúria pode ativar novamente com ação bônus.<br></br>
+            -3: Marca espaço adjacente a um alvo a até 9m. No final do seu turno, local 
+            explode e criaturas adjacentes sofre 1d6 energia. Pela duração da Fúria pode ativar novamente com ação bônus.<br></br>
+            -4: Alvo a até 9m sofre 1d6 radiante e fica cego até o começo de seu próximo 
+            turno (CON nega). Pela duração da Fúria pode ativar novamente com ação bônus.<br></br>
+            -5: Pela duração criatura que lhe acerta com ataque sofre 1d6 energia.<br></br>
+            -6: Pela duração, você e aliados a até 3m recebem +1 CA.<br></br>
+            -7: Pela duração, oponentes tratam espaço a até 4,5m de você como terreno difícil.<br></br>
+            -8: Pela duração arma torna-se Leve, Arremesso 6/18, e causa dano de energia. Se a
+            arma deixar sua mão, aparece novamente ao final do turno.<br></br><br></br>
+
+            <strong>Nivel 6 - Magia de Reforço:</strong> Como ação, alvo tocado recebe um dos seguintes benefícios:
+            -Recupera magia diária de nível 1d3. Só pode receber esse benefício uma vez por dia.
+            -Por 10 minutos adiciona 1d3 para ataques e testes.<br></br><br></br>
+
+            <strong>Nivel 10 - Retorno Instável:</strong> Quando em fúria, após sofrer dano ou falhar em teste de resistência, com 
+            reação produz efeito de Surto Selvagem, que substitui seu atual.<br></br><br></br>
+
+            <strong>Nível 14 - Fúria Caótica:</strong> Quando ativa Surto Selvagem, rola 2 dados e escolhe o efeito. Se rolar o
+            mesmo número, rola novamente até conseguir outro.
+          </p>]}
         },
          img:Barbaro
     },
@@ -208,7 +313,35 @@ export default function Home() {
         classes conjuradoras usa a magia, o Artífice auxiliará sua equipe usando armas de fogo, bombas e até mesmo 
         autômatos para o auxiliar em combate.`,
       arquetipo:{
-        "Alquimista":{ text:``},
+        "Alquimista":{ text:[<p className="arquetipo">
+          Se você gosta da ideia de combinar poções mágicas com suas bugigangas, esta é a subclasse para você!
+          Como um Alquimista, você é capaz de combinar reagentes e criar poções únicas!<br></br><br></br>
+          <strong>Nível 3 – Proficiência e Elixir Experimental</strong> 
+          Assim que escolhe esta subclasse no nível 3, você recebe proficiência em alquimia e aprende um elixir.
+          Sua proficiência será ou em ferramentas de alquimista ou em alguma outra ferramenta de artesão.<br></br>
+          Agora, o seu elixir é a parte mais interessante!<br></br>
+          Pois você pode, sempre que termina um Descanso Longo, preparar um elixir novo!
+          Este elixir pode ter vários efeitos, dentre eles: velocidade, aumento na CA e velocidade de vôo!<br></br><br></br>
+          <strong>Nível 5 – Sábio da Alquimia</strong>
+          E se você pudesse usar sua alquimia para melhorar suas magias?
+          Como um Alquimista, a partir do nível 5 suas magias são potencializadas!
+          Sempre que você conjurar magia usando suas ferramentas de alquimia, você ganha um bônus para a rolagem!
+          Este bônus pode ser usado para uma magia de cura ou de dano elemental e é igual ao seu modificador de inteligência!
+          Pois é, nada mal ter um modificador adicional de +3 ou até +4 já no nível 5 né?<br></br><br></br>
+          <strong>Nível 9 – Reagentes restoradores</strong>
+            Quando você atinge o nível 9, seu grupo agradece seus conhecimentos.
+
+            Pois a partir de agora sua cura é melhorada ainda mais!
+
+            Não apenas você concede pontos de vida temporário a seus aliados, como
+            você pode conjurar restauração menor sem gastar espaços de magia.<br></br><br></br>
+            <strong>Nível 15 – Mestre da Química:</strong> 
+            Se até então você vinha se especializando em poções, no nível 15 você se torna um mestre nelas!
+
+            Não apenas você ganha resistência a dano ácido e veneno, como você também é imune a envenenamento!
+
+            E, além disso, a partir de agora você pode usar magias de cura sem gastar nada a não ser seus suprimentos de magia.
+        </p>]},
         "Artilheiro":{ text:``},
         "Ferreiro de Batalha":{ text:``},
         "Ameiro":{ text:``}
