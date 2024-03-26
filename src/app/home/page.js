@@ -69,7 +69,7 @@ export default function Home() {
                de Força realizados para empurrar, puxar, erguer ou quebrar objetos.
                </p>`
           },
-          "Caminho do Berseker":{ text:`testando`},
+          "Caminho do Berseker":{ text:``},
           "Caminho do Battlerager":{ text:``},
           "Caminho do Guardião Ancestral":{ text:``},
           "Caminho do Arauto Ancestral":{ text:``},
@@ -355,7 +355,8 @@ export default function Home() {
             <div className="descri">
               <Image  src={imagem} width={100} height={100}/>
               <p>Descrição</p>
-              <p>{(classes[pergaminho].arquetipo)["Caminho do guerreiro Totemico"].text}</p>
+              <p>{subclasse ==""?"":
+              (classes[pergaminho].arquetipo)[subclasse].text}</p>
             </div>
           </div>        
         </div>
