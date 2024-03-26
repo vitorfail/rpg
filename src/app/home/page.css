@@ -6,6 +6,9 @@
     font-family: London;
     src: url("../font/OldLondon.ttf");
 }
+.arquetipo{
+    font-size: 15px;
+}
 .inicio{
     box-shadow: inset 0px 0px 44px black;
     overflow-y: auto;
@@ -152,7 +155,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-.descri p:nth-child(1){
+.descri .historia{
     width: 90%;
     font-family: London;
     font-size: 30px;

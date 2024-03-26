@@ -49,7 +49,7 @@ export default function Home() {
         os tanques da equipe, eles também podem sentir o perigo através dos seus sentidos.`,
         arquetipo:{
           "Caminho do guerreiro Totemico":{
-            text:`<p>Seu caminho é buscar a sintonia com o mundo natural, concedendo a você uma 
+            text:[<p className="arquetipo">Seu caminho é buscar a sintonia com o mundo natural, concedendo a você uma 
               afinidade com as bestas. A partir do 3° nível, quando você toma esse caminho, 
               você recebe a habilidade de conjurar as magias sentido bestial e falar com animais, 
               mas apenas na forma de rituais. A partir do 3° nível, quando você adota esse caminho, 
@@ -67,12 +67,132 @@ export default function Home() {
                <strong>Urso:</strong> Você ganha a força de um urso. Sua capacidade de carga (incluindo carga máxima e capacidade
                 de erguer) é dobrada e você tem vantagem em testes 
                de Força realizados para empurrar, puxar, erguer ou quebrar objetos.
-               </p>`
+               </p>]
           },
-          "Caminho do Berseker":{ text:``},
-          "Caminho do Battlerager":{ text:``},
-          "Caminho do Guardião Ancestral":{ text:``},
-          "Caminho do Arauto Ancestral":{ text:``},
+          "Caminho do Berseker":{ text:[<p className="arquetipo">
+            Para alguns bárbaros a fúria é um meio para se alcançar um objetivo e o Caminho do Berserker
+             é banhado em sangue e violência. Conforme entra em fúria, ele se joga sobre seus inimigos vibrando 
+             no caos da batalha, sem se preocupar com sua segurança ou bem-estar, focando-se apenas na destruição
+              de seus inimigos. <br></br><br></br>
+          <strong>Frenesi:</strong> Sempre que entra em Fúria pode escolher entrar em Frenesi. Durante 
+          um Frenesi você pode fazer um único ataque com arma, com uma Ação Bônus, em cada um de seus turnos 
+          após esse. Quando o frenesi acabar você sofre um nível de exaustão.<br></br><br></br>
+
+        <strong>Fúria sem Mente:</strong> Você não pode ser Encantado ou Assustado durante uma Fúria. Caso 
+        esteja Encantado ou Assustado, ao entrar em Fúria o efeito é suspenso pela sua duração.<br></br><br></br>
+
+        <strong>Presença Intimidadora:</strong> Você pode rugir ameaçadoramente a uma criatura a até 9m. 
+        O alvo deve passar em resistência de SAB (CD = 8 + bônus de proficiência + modificador de Carisma) ou 
+        ficar Assustado por 1 turno. Em turnos seguintes você pode estender o efeito por mais um turno gastando
+         uma ação. Esse efeito acaba caso alvo termine seu turno sem linha de visão ou a mais de 18m de você.
+          Um alvo que passe no teste torna-se imune ao efeito por 24h.<br></br><br></br>
+
+        <strong>Retaliação:</strong> Sempre que sofrer dano de uma criatura adjacente ao 
+        seu personagem, você pode usar sua Reação para realizar um ataque corpo-a-corpo com arma contra ela.
+          </p>]},
+          "Caminho do Battlerager":{ text:[<p className="">
+            omente anões seguidores do deus da guerra e que trilham o Caminho da Fúria podem seguir 
+            o caminho do Battlerager. Conhecidos como Kuldjargh (literalmente "o machado idiota" em Anão), 
+            eles se especializaram no combate com uma volumosa armadura repleta de cravos pontiagudos, com a 
+            qual eles se entregam a fúria do combate e lançam-se sobre seus adversários, transformando seus próprios 
+            corpos em armas letais. <br></br><br></br>
+
+        <strong>Fúria com Armadura:</strong> A partir do 3º nível, você ganha à habilidade de usar a Armadura de
+        Espinhos como uma arma (veja descrição do item abaixo). Enquanto estiver usando essa armadura sob
+          o efeito da Fúria, você pode usa-la para fazer um ataque corpo a corpo contra um alvo adjacente a você 
+          como uma ação bônus. Se o ataque acertar, os espinhos infligem 1D4 de dano perfurante, mais seu modificador
+          de Força. Além disso, quando você usa a ação de ataque para agarrar uma criatura, o alvo recebe 3 de dano 
+          penetrante se o seu teste de agarrar for bem-sucedido.<br></br><br></br>
+
+      <strong>Armadura de Espinhos:</strong> Essa armadura é um tipo raro de armadura média, 
+      criada apenas por anões. Ela consiste em um casaco de couro e perneiras cobertos de espinhos de
+       metal. AC: 14 + modificador de Destreza (Max 2), Furtividade: Desvantagem, Peso: 45 lbs (20kg) e 
+       Custo: 75 Peças de Ouro.<br></br><br></br>
+.
+      <strong>Vivacidade Imprudente:</strong> A partir do 6º nível, quando você usa Ataque Descuidado
+       enquanto estiver em fúria, você também ganha pontos de vida temporários igual ao seu modificador 
+       de Constituição (Mínimo de 1). Eles somem se qualquer um deles restar quando a Fúria terminar.<br></br><br></br>
+
+      <strong>Investida Furiosa:</strong> No 10º nível, você pode tomar a ação Disparada como uma ação
+      bônus enquanto estiver em fúria.<br></br><br></br>
+
+      <strong>Retribuição Farpada:</strong> A partir do nível 14, quando uma criatura adjacente a você acerta-lo 
+      com um ataque corpo a corpo, o atacante sofre 3 de dano perfurante se você estiver em fúria, não estiver 
+      incapacitado e estiver vestindo a Armadura de Cravos.
+          </p>]},
+          "Caminho do Guardião Ancestral":{ text:[<p className="arquetipo">
+            Alguns bárbaros saem de culturas que reverenciam seus antepassados. Essas tribos ensinam que os 
+            guerreiros do passado permanecem no mundo como espíritos poderosos, que podem guiar e proteger a vida. 
+            Quando um bárbaro que segue este caminho entra em 
+            fúria, o bárbaro entra em contato com o mundo espiritual e convida esses espíritos guardiões para ajudar.<br></br><br></br>
+
+            <strong>Protetor Ancestral:</strong>  Enquanto estiver em em Fúria, a primeira criatura que acertar com um ataque em seu
+             turno se torna alvo dos espíritos guerreiros. Até o início do seu próximo turno, esse alvo tem desvantagem 
+             em qualquer jogada de ataque que não seja contra você, e quando o alvo atingir uma criatura
+              diferente de você com um ataque, essa criatura tem resistência ao dano causado pelo ataque. O efeito
+               sobre o alvo acaba mais cedo se sua fúria terminar.<br></br><br></br>
+
+              <strong>Escudo Espiritual:</strong>  Os guardiães espirituais que te protegem podem prover uma defesa 
+              sobrenatural para aqueles que você defende. Se você estiver em fúria e outra criatura que 
+              possa ver a até 9 metros receba dano, você pode usar sua reação para reduzir esse dano em 2d6. 
+              Esse valor aumenta para 3d6 ao nível 10 e 4d6 ao 14.<br></br><br></br>
+
+              <strong>Consultar os Espíritos:</strong>  Você ganha a habilidade de se consultar com seus espíritos ancestrais. 
+              Uma vez por Descanso Longo, você pode usar Augúrio ou Clarividência, sem precisar de um espaço 
+              de magia ou componentes materiais. Em vez de criar um sensor esférico, esse uso de clarividência
+               invoca invisivelmente um de seus espíritos ancestrais para o local escolhido. Sabedoria é seu
+                atributo chave de conjuração.<br></br><br></br>
+
+              <strong>Ancestrais Vingativos:</strong>  Seus espíritos ancestrais aumentam seu poder o suficiente para conseguir 
+              retaliar. Quando você usa seu Escudo Espiritual para reduzir o dano de um ataque, o atacante recebe 
+              uma quantidade de dano de energia igual ao dano que seu escudo espiritual reduziu
+          </p> ]},
+          "Caminho do Arauto Ancestral":{ text:[<p className="arquetipo">
+            Seguidores desse caminho aprendem a converter sua fúria em um véu de energia primordial, 
+            tocando a natureza para destruir seus inimigos.<br></br><br></br>
+
+            <strong>Fúria da Tempestade:</strong>  Quando em Fúria você emana uma aura de 3m. Escolha um terreno; 
+            você recebe a habilidade relacionada a ele. Essa habilidade ativa quando entra em Fúria, e 
+            pode ativá-la novamente a cada turno com uma ação bônus. Você pode trocar o terreno ao subir de 
+            nível nessa classe.<br></br><br></br>
+
+          <strong>Deserto:</strong> Outras criaturas na aura sofrem 2 de dano de fogo. Esse dano aumenta para 3 ao nível 5, 
+          4 ao 10, 5 ao 15, e 6 ao nível 20.<br></br><br></br>
+
+          <strong>Mar:</strong> Uma criatura na aura deve passar em resistência de DES, CD baseada em CON, ou sofrer
+           1d6 elétrico, metade caso resista. Esse dano torna-se 2d6 ao nível 10, 3d6 ao 15, e 4d6 ao 20.<br></br><br></br>
+
+          <strong>Tundra:</strong> Criaturas de sua escolha na aura recebem 2 PV temporários. Esse valor aumenta para
+           3 ao nível 5, 4 ao 10, 5 ao 15, e 6 ao nível 20.<br></br><br></br>
+
+          <storng>Alma da Tempestade:</storng> Você recebe a habilidade relacionada ao terreno que escolheu 
+          ao nível 3. Essas habilidades funcionam fora de Fúria.<br></br><br></br>
+
+          <strong>Deserto:</strong> Recebe Resistência a dano de Fogo, e não sofre efeito de calor extremo. Com 
+          uma ação pode tocar um objeto inflamável solto, e fazê-lo pegar fogo.<br></br><br></br>
+
+          <strong>Mar:</strong> Recebe Resistência a dano Elétrico, e pode respirar debaixo d'água. Também 
+          recebe deslocamento de nado de 9m.<br></br><br></br>
+
+          <strong>Tundra:</strong> Recebe Resistência a dano de Frio, e não sofre efeito de frio extremo.
+           Também pode tocar até 1,5m³ de água sem nenhuma criatura dentro e congelá-la. Esse gelo derrete em 1 minuto.
+          10 - Escudo da Tempestade: Quando em Fúria, aliados dentro de sua aura recebem a
+           resistência à dano garantida por sua Alma da Tempestade.<br></br><br></br>
+
+          <strong>Tempestade Furiosa:</strong> Você recebe a habilidade relacionada ao terreno que escolheu 
+          ao nível 3. Testes de resistência são baseados em CON.<br></br><br></br>
+
+          <strong>Deserto:</strong> Quando acertado por um ataque, com uma reação força resistência de DES. Oponente
+           que falhe sofre ½ seu nível de bárbaro em dano de Fogo.<br></br><br></br>
+
+          <strong>Mar:</strong> Quando acerta uma criatura em sua aura com um ataque, com uma reação força resistência 
+          de FOR. Caso falhe oponente é Derrubado.<br></br><br></br>
+
+          <strong>Tundra:</strong> Quando sua Aura da Tempestade está ativa, pode escolher uma criatura que pode 
+          enxergar na aura. Alvo deve passar em resistência de FOR ou ter seu deslocamento reduzido a 
+          0 até o começo de seu próximo turno.
+
+          </p>]},
           "Caminho do Zelote":{ text:``},
           "Caminho da Besta":{ text:``},
           "Caminho da Magia Selvagem":{ text:``}
@@ -326,7 +446,7 @@ export default function Home() {
               <p>{descri}</p>
               <p>Sub-Classes:</p>
               {pergaminho ===""?"":
-              Object.keys(classes[pergaminho].arquetipo).map((item, key) => (<p key={key}><strong>{item}</strong></p>))}
+              Object.keys(classes[pergaminho].arquetipo).map((item, key) => (<p className="historia" key={key}><strong>{item}</strong></p>))}
             </div>
           </div>
           <div id={proximo?"menu":""} className="menu">
@@ -356,7 +476,7 @@ export default function Home() {
               <Image  src={imagem} width={100} height={100}/>
               <p>Descrição</p>
               <p>{subclasse ==""?"":
-              (classes[pergaminho].arquetipo)[subclasse].text}</p>
+              (classes[pergaminho].arquetipo)[subclasse].text[0]}</p>
             </div>
           </div>        
         </div>
