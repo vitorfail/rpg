@@ -25,7 +25,7 @@ export default function Home() {
   const [arque, setarque] = useState("")
   const [imagem,setimagem] = useState("")
   const [popup,setpopup] = useState(false)
-  const [ proximo, setproximo] = useState(false)
+  const [ proximo, setproximo] = useState(1)
   const [ subclasse, setsubclasse] = useState("")
   function selecionar_classe(nome){
     setpergaminho(nome)
@@ -33,7 +33,6 @@ export default function Home() {
     setarque(classes[nome].arquetipo)
     setimagem(classes[nome].img)
     setsubclasse(Object.keys(classes[nome].arquetipo)[0])
-    alert(classes[pergaminho].arquetipo["Caminho do guerreiro Totemico"].text)
   }
   function selecionar_arquetipo(nome){
     setsubclasse(nome)
@@ -547,7 +546,7 @@ export default function Home() {
             <p>Pense bem ao escolher sua classe. Pois não podera mudá-la. Deseja escolha essa classe?</p>
             <div className="botoes">
               <div className="button">
-                <button>Sim</button>
+                <button onClick={() => {setproximo(3); setpopup(false)}}>Sim</button>
               </div>
               <div className="button">
                 <button onClick={() => setpopup(false)} id="n">Não</button>
@@ -556,9 +555,9 @@ export default function Home() {
           </div>
         </div>
         <div className="inicio">
-          <div id={proximo?"":"menu"} className="menu">
+          <div id={proximo==1?"menu":""} className="menu">
             <div className="classes">
-              <p className="titulo">Classes</p>
+              <p className="titulo">Escolha sua Classe</p>
               <Image alt="icon" src={Linha} width={100} height={70}></Image>
               <div className="lista">{
                 Object.keys(classes).map((item, key) => (
@@ -570,7 +569,7 @@ export default function Home() {
               }
               </div>
               <div className="button">
-                  <button onClick={() => setproximo(true)} >Proximo</button>
+                  <button onClick={() => setproximo(2)} >Proximo</button>
               </div>
             </div>
             <div className="descri">
@@ -582,7 +581,7 @@ export default function Home() {
               Object.keys(classes[pergaminho].arquetipo).map((item, key) => (<p className="historia" key={key}><strong>{item}</strong></p>))}
             </div>
           </div>
-          <div id={proximo?"menu":""} className="menu">
+          <div id={proximo==2?"menu":""} className="menu">
             <div className="classes">
               <p className="titulo">Subclasses de {pergaminho}</p>
               <Image alt="icon" src={Linha} width={100} height={70}></Image>
@@ -598,7 +597,7 @@ export default function Home() {
               </div>
               <div className="botoes">
                 <div  className="button">
-                    <button id="n" onClick={() => setproximo(false)} >Voltar</button>
+                    <button id="n" onClick={() => setproximo(1)} >Voltar</button>
                 </div>
                 <div className="button">
                     <button onClick={() => setpopup(true)} >Proximo</button>
@@ -611,7 +610,10 @@ export default function Home() {
               <p>{subclasse ==""?"":
               (classes[pergaminho].arquetipo)[subclasse].text[0]}</p>
             </div>
-          </div>        
+          </div>
+          <div id={proximo==2?"menu":""} className="custom">
+            
+            </div>        
         </div>
     </body>
   );
