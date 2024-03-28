@@ -7,7 +7,9 @@
     src: url("../font/OldLondon.ttf");
 }
 :root{
-    --cabelo:red;
+    --cabelo-r:34;
+    --cabelo-g:45;
+    --cabelo-b:70;
     --pele-r:63;
     --pele-g:105;
     --pele--b:56;
@@ -22,6 +24,7 @@
     radial-gradient(rgba(91, 88, 71, 0.5) 20%, rgba(91, 88, 71, 0) 22%);
 
 }
+
 .custom{
     display: none;
     align-items: center;
@@ -374,7 +377,8 @@ svg:not(:root) {
     height: 100%;
       width: 100%;
   }
-  .barba{
+  .barba{position: absolute;
+    box-sizing: border-box;
     display: none;
     position: absolute;
     margin-top: 45%;
@@ -388,7 +392,8 @@ svg:not(:root) {
   #barba2{
     margin-top: 32%;
   }
-  .roupa{
+  .roupa{position: absolute;
+    box-sizing: border-box;
     z-index: 10;
     width: 80%;
     height: 100%;
@@ -399,23 +404,25 @@ svg:not(:root) {
     position: fixed;
     opacity: 1.5;
     top: 65%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
   
   }
   
-  .head {
+  .head {position: absolute;
+    box-sizing: border-box;
     z-index: 7;
     width: 100%;
     height: calc(var(--unit) * 445);
   
   }
   
-  .hair {
+  .hair {position: absolute;
+    box-sizing: border-box;
     z-index: 6;
     width: 89%;
     height: 60%;
-    background-color: var(--cabelo);
+    background-color: rgb(var(--cabelo-r), var(--cabelo-g), var(--cabelo-b));
     background-image: radial-gradient(
       ellipse at bottom,
       rgba(190, 186, 176, 0.226) 60%,
@@ -540,6 +547,8 @@ svg:not(:root) {
   }
   
   .face {
+    position: absolute;
+  box-sizing: border-box;
     z-index: 5;
     width: calc(var(--unit) * 532);
     height: 100%;
@@ -566,12 +575,16 @@ svg:not(:root) {
   }
   
   .ear {
+    position: absolute;
+  box-sizing: border-box;
     width: calc(var(--unit) * 50);
     height: calc(var(--unit) * 110);
     background-color: rgb(calc(var(--pele-r)*0.8), calc(var(--pele-g)*0.8), calc(var(--pele--b)*0.8));
   }
   
   .ear-left {
+    position: absolute;
+  box-sizing: border-box;
     transform: rotateZ(-25deg);
       top: 50%;
       left: 5.3%;
@@ -579,6 +592,8 @@ svg:not(:root) {
   }
   
   .ear-right {
+    position: absolute;
+  box-sizing: border-box;
     transform: rotateZ(25deg);
       top: 50%;
       right: 2.3%;
@@ -586,6 +601,8 @@ svg:not(:root) {
   }
   
   .face .eye {
+    position: absolute;
+  box-sizing: border-box;
     z-index: 2;
     width: calc(var(--unit) * 95);
     height: calc(var(--unit) * 100);
@@ -595,6 +612,8 @@ svg:not(:root) {
   }
   
   .face .eye-left {
+    position: absolute;
+  box-sizing: border-box;
     background-image: radial-gradient(
       circle at top left,
       rgba(255, 255, 225, 0.2) 30%,
@@ -606,6 +625,8 @@ svg:not(:root) {
   }
   
   .face .eye-right {
+    position: absolute;
+  box-sizing: border-box;
     background-image: radial-gradient(
       circle at top right,
       rgba(255, 255, 225, 0.2) 30%,
@@ -617,25 +638,33 @@ svg:not(:root) {
   }
   
   .face .eyebrow {
+    position: absolute;
+  box-sizing: border-box;
     width: calc(var(--unit) * 100);
     height: calc(var(--unit) * 100);
     border-radius: 40% 10% 0 0;
-    border-top: calc(var(--unit) * 25) solid #624e41;
+    border-top: calc(var(--unit) * 25) solid rgb(var(--cabelo-r), var(--cabelo-r), var(--cabelo-r));
   }
   
   .face .eyebrow-left {
+    position: absolute;
+  box-sizing: border-box;
     top: 33.5%;
     left: 7%;
     transform: rotate(20deg);
   }
   
   .face .eyebrow-right {
+    position: absolute;
+  box-sizing: border-box;
     top: 34.5%;
     right: 8%;
     transform: rotate(-15deg) rotateY(180deg);
   }
   
   .face .nose {
+    position: absolute;
+  box-sizing: border-box;
     z-index: 2;
     width: calc(var(--unit) * 43);
     height: calc(var(--unit) * 55);
@@ -667,6 +696,8 @@ svg:not(:root) {
   }
   
   .face .blood {
+    position: absolute;
+  box-sizing: border-box;
     width: calc(var(--unit) * 12);
     height: calc(var(--unit) * 55);
     top: 69%;
@@ -677,6 +708,8 @@ svg:not(:root) {
   }
   
   .avatar .body {
+    position: absolute;
+  box-sizing: border-box;
     width: calc(var(--unit) * 270);
     height: calc(var(--unit) * 463);
     top: 48%;
@@ -684,6 +717,8 @@ svg:not(:root) {
   }
   
   .body .neck {
+    position: absolute;
+  box-sizing: border-box;
     z-index: 4;
     width: calc(var(--unit) * 80);
     height: calc(var(--unit) * 38);
@@ -700,11 +735,15 @@ svg:not(:root) {
   }
   
   .body .hospital-gown {
+    position: absolute;
+  box-sizing: border-box;
     width: calc(var(--unit) * 270);
     height: calc(var(--unit) * 405);
   }
   
   .hospital-gown .chest {
+    position: absolute;
+  box-sizing: border-box;
     z-index: 3;
     width: calc(var(--unit) * 190);
     height: calc(var(--unit) * 405);
@@ -796,6 +835,8 @@ svg:not(:root) {
   }
   
   .body .arm {
+    position: absolute;
+  box-sizing: border-box;
     transform: rotateZ(94deg);
       right: 57.5%;
       z-index: -1;
@@ -805,11 +846,15 @@ svg:not(:root) {
   }
   
   .body .arm-right {
+    position: absolute;
+  box-sizing: border-box;
     transform: rotateZ(264deg);
       right: -25.4%;
   }
   
   .body .arm-right::before {
+    position: absolute;
+  box-sizing: border-box;
     content: "";
     width: calc(var(--unit) * 105);
     height: calc(var(--unit) * 52.8);
@@ -830,6 +875,8 @@ svg:not(:root) {
   }
   
   .body .arm-right::after {
+    position: absolute;
+  box-sizing: border-box;
     content: "";
     width: calc(var(--unit) * 84);
     height: calc(var(--unit) * 70.4);
@@ -865,6 +912,8 @@ svg:not(:root) {
   }
   
   .body .arm-left::before {
+    position: absolute;
+  box-sizing: border-box;
     content: "";
     width: 60%;
     height: 60%;
@@ -885,6 +934,8 @@ svg:not(:root) {
   }
   
   .body .arm-left::after {
+    position: absolute;
+  box-sizing: border-box;
     content: "";
     width: 48%;
     height: 80%;
@@ -900,6 +951,8 @@ svg:not(:root) {
   }
   
   .body .leg {
+    position: absolute;
+  box-sizing: border-box;
     z-index: 2;
     width: calc(var(--unit) * 64);
     height: calc(var(--unit) * 155);
@@ -946,15 +999,21 @@ svg:not(:root) {
   }
   
   .body .leg-left {
+    position: absolute;
+  box-sizing: border-box;
     left: 23%;
   }
   
   .body .leg-right {
+    position: absolute;
+  box-sizing: border-box;
     right: 22%;
     transform: rotateY(180deg);
   }
   
   .body .foot {
+    position: absolute;
+  box-sizing: border-box;
     width: calc(var(--unit) * 125);
     height: calc(var(--unit) * 60);
     top: 87%;
@@ -1000,16 +1059,22 @@ svg:not(:root) {
   }
   
   .body .foot-left {
+    position: absolute;
+  box-sizing: border-box;
     left: 2%;
     transform: rotate(-18deg);
   }
   
   .body .foot-right {
+    position: absolute;
+  box-sizing: border-box;
     right: 0.5%;
     transform: rotate(18deg) rotateY(180deg);
   }
   
   .face .eyelashes {
+    position: absolute;
+  box-sizing: border-box;
     width: calc(var(--unit) * 30);
     height: calc(var(--unit) * 45);
     top: 46.5%;
@@ -1024,60 +1089,18 @@ svg:not(:root) {
   }
   
   .face .eyelashes-left {
+    position: absolute;
+  box-sizing: border-box;
     left: 7.5%;
     transform: rotate(25deg);
   }
   
   .face .eyelashes-right {
+    position: absolute;
+  box-sizing: border-box;
     z-index: -1;
     right: 9.5%;
     transform: rotate(-25deg) rotateY(180deg);
   }
-  
-  .logo {
-    position: fixed;
-    top: 22%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(var(--unit) * 750);
-    height: calc(var(--unit) * 500);
-    filter: drop-shadow(
-    0 calc(var(--unit) * 25) calc(var(--unit) * 35) #f70000
-    );
-  }
-  
-  .text {
-    text-align: center;
-    font-family: "Amarante", cursive;
-    line-height: calc(var(--unit) * 170);
-    font-size: calc(var(--unit) * 170);
-    text-transform: uppercase;
-    -webkit-text-stroke: calc(var(--unit) * 6.5) #f70000;
-    color: transparent;
-  }
-  
-  .line-top {
-    width: calc(var(--unit) * 750);
-    top: -4%;
-  }
-  
-  .line-bottom-left {
-    width: calc(var(--unit) * 95);
-    top: 38%;
-  }
-  
-  .line-bottom-right {
-    width: calc(var(--unit) * 95);
-    top: 38%;
-    right: 0%;
-  }
-  
-  .line {
-    height: calc(var(--unit) * 20);
-    border: calc(var(--unit) * 8) solid #f70000;
-  }
-  
-  br {
-    position: static;
-  }
+
   
