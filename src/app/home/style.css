@@ -24,8 +24,8 @@ svg:not(:root) {
     --chapeu-r:245;
     --chapeu-g:125;
     --chapeu-b:25;
-  --size: 65;
-  --unit: calc((var(--size) / 892) * 1vmin);
+  --size: 15;
+  --unit: calc((var(--size) / 692) * 1vmin);
   --pattern: radial-gradient(rgba(91, 88, 71, 0.6) 10%, rgba(91, 88, 71, 0) 12%),
     radial-gradient(rgba(91, 88, 71, 0.6) 10%, rgba(91, 88, 71, 0) 12%),
     radial-gradient(rgba(91, 88, 71, 0.5) 20%, rgba(91, 88, 71, 0) 22%),
@@ -94,9 +94,10 @@ body {
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
-
+.avatar path{
+  opacity: 1;
+}
 .head {
   z-index: 7;
   width: 100%;
