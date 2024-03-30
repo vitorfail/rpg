@@ -2,6 +2,8 @@
 import Image from "next/image";
 import "./page.css"
 import Barba from "./barba.png"
+import Barba2 from "./barba2.png"
+import Barba3 from "./barba3.png"
 import Espada from "./espada.png"
 import Barbaro from "./barbaro.png"
 import Artifice from "./artifice.png"
@@ -28,6 +30,7 @@ export default function Home() {
   const [popup,setpopup] = useState(false)
   const [ proximo, setproximo] = useState(1)
   const [ subclasse, setsubclasse] = useState("")
+  const [ barba, setbarba] = useState("")
   const [cor_cabelo, setcor_cabelo] =useState([0,0,0])
   const [cor_pele, setcor_pele] =useState([0,0,0])  
   function selecionar_classe(nome){
@@ -636,8 +639,8 @@ export default function Home() {
           </div>
           <div id={proximo==3?"menu":""} className="custom">
             <div className="personagem">
-            <div class="avatar">
-                <svg class="chapeu" viewBox='0 0 180 180'>
+            <div className="avatar">
+                <svg className="chapeu" viewBox='0 0 180 180'>
                     <path d='M132 44 L132 44 L115 20 L70 5 L59 6 L52 11 L45 15 L40 25 L 35 37 L 35 44 L28 48 L28 52 L31 58 L28 62 L30 68 L29 100 L31 121 L14 125 L4 130 L1 140 L15 168 L30 173 L59 165 L108 167 L153 163 L174 163 L179 155 L179 150 L168 125 L 153 115 L137 117 L104 84 L106 78 L100 72 L101 68 L93 64 L95 60 L83 44 L82 40 L89 32 L99 30 L118 43 L132 44' stroke='#27276e' fill='#283891'></path>
                     <path d='M31 121 L31 121 L33 130 L68 140 L99 141 L120 136 L134 131 L143 125 L137 117' strokeWidth='2'  fill='transparent'></path>
                     <path d='M59 165 L59 165 L82 155 L107 150 L123 150 L140 155 L153 163 L108 167 L59 165'></path>
@@ -653,18 +656,17 @@ export default function Home() {
                     <path d='M68 50 L68 50 L78 54 L87 60 L87 62 L68 50'></path>
                     <path d='M86 27 L86 27 L100 23 L110 26 L118 32 L123 37 L104 28 L95 27 L86 27'></path>
                 </svg>
-              
-                <div class="head">
-                  <div class="hair"></div>
-                  <div class="face">
-                    <div class="eyebrow eyebrow-left"></div>
-                    <div class="eyebrow eyebrow-right"></div>
-                    <div class="eye eye-left"></div>
-                    <div class="eye eye-right"></div>
-                    <div class="eyelashes eyelashes-left"></div>
-                    <div class="eyelashes eyelashes-right"></div>
-                    <div class="nose"></div>
-                    <div class="barba">
+                <div className="head">
+                  <div className="hair"></div>
+                  <div className="face">
+                    <div className="eyebrow eyebrow-left"></div>
+                    <div className="eyebrow eyebrow-right"></div>
+                    <div className="eye eye-left"></div>
+                    <div className="eye eye-right"></div>
+                    <div className="eyelashes eyelashes-left"></div>
+                    <div className="eyelashes eyelashes-right"></div>
+                    <div classNAme="nose"></div>
+                    <div id={barba=="barba1"?"mostrar":""} className="barba">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" >
                         <g><path style={{"opacity":0.304}}  d="M -0.5,-0.5 C 0.166667,-0.5 0.833333,-0.5 1.5,-0.5C 1.16667,0.5 0.5,1.16667 -0.5,1.5C -0.5,0.833333 -0.5,0.166667 -0.5,-0.5 Z"/></g>
                         <g><path style={{"opacity":0.294}}  d="M 294.5,-0.5 C 295.167,-0.5 295.833,-0.5 296.5,-0.5C 296.5,0.166667 296.5,0.833333 296.5,1.5C 295.5,1.16667 294.833,0.5 294.5,-0.5 Z"/></g>
@@ -682,8 +684,8 @@ export default function Home() {
                         <g><path style={{"opacity":0.08}}  d="M 296.5,230.5 C 296.5,231.167 296.5,231.833 296.5,232.5C 295.833,232.5 295.167,232.5 294.5,232.5C 294.833,231.5 295.5,230.833 296.5,230.5 Z"/></g>
                         </svg>
                     </div>
-                    <div id="barba2" class="barba">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3590 2950" >
+                    <div id={barba=="barba2"?"mostrar":""} className="barba">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 450" >
                         <g><path style={{"opacity":1}}  d="M 265.5,109.5 C 266.847,108.829 268.014,108.829 269,109.5C 269.513,108.473 270.013,107.473 270.5,106.5C 272.792,104.733 275.458,103.733 278.5,103.5C 281.152,103.59 283.485,102.924 285.5,101.5C 305.715,97.8707 324.715,101.371 342.5,112C 360.991,124.483 378.324,138.483 394.5,154C 405.152,162.33 416.486,169.663 428.5,176C 438.485,179.854 448.818,181.354 459.5,180.5C 462.716,180.655 465.383,179.655 467.5,177.5C 474.013,170.779 476.18,162.779 474,153.5C 469.774,143.285 462.107,137.618 451,136.5C 446.304,136.047 443.471,138.047 442.5,142.5C 441.849,143.091 441.182,143.757 440.5,144.5C 439.304,144.154 439.304,143.654 440.5,143C 439.473,142.487 438.473,141.987 437.5,141.5C 435.644,134.71 437.978,129.877 444.5,127C 467.815,127.584 484.648,138.417 495,159.5C 499.127,176.422 494.294,190.256 480.5,201C 452.098,222.576 419.931,232.743 384,231.5C 363.008,231.402 342.175,229.569 321.5,226C 315.591,224.941 309.925,223.441 304.5,221.5C 302.485,220.076 300.152,219.41 297.5,219.5C 280.392,214.947 265.726,206.28 253.5,193.5C 244.486,203.189 233.819,210.689 221.5,216C 189.776,226.883 157.11,232.05 123.5,231.5C 113.83,231.074 104.163,230.574 94.5,230C 89.2422,229.386 84.2422,228.219 79.5,226.5C 77.4855,225.076 75.1522,224.41 72.5,224.5C 50.1654,218.302 31.3321,206.636 16,189.5C 8.17309,175.412 8.83976,161.745 18,148.5C 27.9672,136.101 40.8005,128.768 56.5,126.5C 64.9172,125.865 69.5838,129.698 70.5,138C 70.1993,141.097 69.1993,143.93 67.5,146.5C 65.9724,145.198 64.9724,143.531 64.5,141.5C 63.1209,137.715 60.2875,136.049 56,136.5C 37.0992,139.741 29.7658,150.741 34,169.5C 36.4432,175.606 40.9432,179.106 47.5,180C 62.9514,181.554 77.2848,178.221 90.5,170C 97.8333,164.667 105.167,159.333 112.5,154C 124.205,143.293 136.205,132.959 148.5,123C 157.5,116.831 166.834,111.164 176.5,106C 204.539,94.877 230.206,98.7103 253.5,117.5C 257.264,114.389 261.264,111.723 265.5,109.5 Z"/></g>
                         <g><path style={{"opacity":1}}  d="M 285.5,101.5 C 283.485,102.924 281.152,103.59 278.5,103.5C 280.515,102.076 282.848,101.41 285.5,101.5 Z"/></g>
                         <g><path style={{"opacity":1}}  d="M 270.5,106.5 C 270.013,107.473 269.513,108.473 269,109.5C 268.014,108.829 266.847,108.829 265.5,109.5C 266.659,107.75 268.326,106.75 270.5,106.5 Z"/></g>
@@ -694,18 +696,32 @@ export default function Home() {
                         <g><path style={{"opacity":1}}  d="M 72.5,224.5 C 75.1522,224.41 77.4855,225.076 79.5,226.5C 76.8478,226.59 74.5145,225.924 72.5,224.5 Z"/></g>
                         </svg>                    
                     </div>
-                    <div id="barba3" class="barba">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3600 2700" >
-
+                    <div id={barba=="barba3"?"mostrar":""} className="barba">
+                      <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4512 4912">
+                      <g><path d="M58 4215 c-59 -33 -58 -21 -48 -611 9 -544 18 -732 46 -924 50 -348
+                      155 -596 328 -779 113 -118 471 -372 755 -535 423 -243 807 -393 1156 -452
+                      122 -21 386 -23 500 -5 518 83 1139 377 1734 821 156 116 208 164 283 264 181
+                      240 268 550 298 1061 16 268 13 1058 -4 1098 -21 50 -52 72 -102 72 -36 0 -49
+                      -6 -76 -32 l-32 -32 -7 -190 c-13 -322 -49 -550 -124 -778 -148 -448 -417
+                      -732 -831 -876 -208 -73 -404 -101 -708 -101 l-228 -1 -19 73 c-94 370 -469
+                      504 -703 251 -73 -79 -123 -179 -150 -301 l-6 -28 -173 0 c-559 0 -917 113
+                      -1196 377 -121 114 -205 231 -286 398 -131 269 -205 587 -235 1003 -6 84 -15
+                      164 -20 177 -19 50 -103 78 -152 50z"/>
+                      <path d="M2307 3750 c-382 -132 -1013 -507 -1210 -720 -79 -85 -107 -139 -107
+                      -204 0 -66 25 -113 78 -147 114 -72 215 -45 530 145 382 230 518 281 787 297
+                      192 11 157 11 345 0 273 -16 411 -69 795 -301 252 -153 356 -192 453 -170 91
+                      20 152 92 152 177 -1 113 -135 259 -410 445 -292 198 -660 391 -910 477 -84
+                      29 -102 32 -165 27 -90 -8 -87 -8 -175 -1 -66 5 -85 2 -163 -25z"/></g>
                       </svg>
+
                     </div>
                   </div>
-                  <div class="ear ear-left"></div>
-                  <div class="ear ear-right"></div>
+                  <div className="ear ear-left"></div>
+                  <div className="ear ear-right"></div>
                 </div>
-                <div class="body">
-                  <div class="neck"></div>
-                  <div class="roupa">
+                <div className="body">
+                  <div className="neck"></div>
+                  <div className="roupa">
                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 500 1250" >
                       <g><path style={{"opacity":0.765}} fill="#5f641a" d="M 238.5,-0.5 C 240.167,-0.5 241.833,-0.5 243.5,-0.5C 243.5,-0.166667 243.5,0.166667 243.5,0.5C 240.833,0.833333 238.167,1.16667 235.5,1.5C 236.5,0.833333 237.5,0.166667 238.5,-0.5 Z"/></g>
                       <g><path style={{"opacity":0.953}} fill="#807b1e" d="M 235.5,1.5 C 233.485,2.92381 231.152,3.59047 228.5,3.5C 230.515,2.07619 232.848,1.40953 235.5,1.5 Z"/></g>
@@ -772,15 +788,14 @@ export default function Home() {
                       </svg>
                       
                   </div>
-                  <div class="arm arm-left"></div>
-                  <div class="arm arm-right"></div>
-                  <div class="leg leg-left"></div>
-                  <div class="leg leg-right"></div>
-                  <div class="foot foot-left"></div>
-                  <div class="foot foot-right"></div>
+                  <div className="arm arm-left"></div>
+                  <div className="arm arm-right"></div>
+                  <div className="leg leg-left"></div>
+                  <div className="leg leg-right"></div>
+                  <div className="foot foot-left"></div>
+                  <div className="foot foot-right"></div>
                 </div>
               </div>
-
               </div>
             <div className="opcoes">
               <p className="titulo">Opções</p>
@@ -796,7 +811,9 @@ export default function Home() {
               </div>
                   <p>Barbas</p>
                   <div className="cor">
-                    <Image width={20} height={20} src={Barba} ></Image>
+                    <Image onClick={() => setbarba("barba1")} width={20} height={20} src={Barba} ></Image>
+                    <Image onClick={() => setbarba("barba2")} width={20} height={20} src={Barba2} ></Image>
+                    <Image onClick={() => setbarba("barba3")} width={20} height={20} src={Barba3} ></Image>
                 </div>
             </div>
           </div>        
