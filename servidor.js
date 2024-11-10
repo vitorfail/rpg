@@ -1,9 +1,8 @@
 import axios from "axios";
 
 const Axios = axios.create({
-  baseURL: process.env.REACT_APP_URL
+  baseURL: "https://rpg-back-hazel.vercel.app/"
 });
-
 Axios.interceptors.request.use(async config => {
   if (localStorage.getItem('token_jwt')) {
     config.headers.Authorization = 'Bearer '+localStorage.getItem('token_jwt');

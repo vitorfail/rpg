@@ -4,10 +4,12 @@ import "./page.css"
 import Espada from "./espada.png"
 import Axios from "../../../servidor";
 import { useState } from "react";
+import { useRouter } from 'next/navigation';
 import Popup from "../components/popup";
 
 
 export default function Home() {
+    const router = useRouter()
     const [username, setusername] = useState("")
     const [senha, setsenha] = useState("")
     const [csenha, setcsenha] = useState("")
@@ -22,9 +24,14 @@ export default function Home() {
             setsubtitulo("Preencha todos os campos")
         }
         else{
-            Axios.post("api/auth", {username: username, password:senha})
+            Axios.post("api/auth/register", {username: username, password:senha})
             .then( res =>{
-                console.log(res.data)
+                if("token" in res.data){
+                    router.push("/home")
+                }
+            })
+            .catch( er =>{
+                console.log(er)
             })    
         }
     }
@@ -45,7 +52,7 @@ export default function Home() {
                 <p className="titulo">{titulo}</p>
                 <p className="subtitulo">{subtitulo}</p>
                 <div className="button">
-                  <button >Ok</button>
+                  <button onClick={() => seterro(false)} >Ok</button>
               </div>
             </Popup>
           <Image height={90} width={90} className="espada" src={Espada} />
