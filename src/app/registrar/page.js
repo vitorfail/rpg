@@ -6,6 +6,7 @@ import Axios from "../../../servidor";
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import Popup from "../components/popup";
+import Loading from "../components/loading";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
     const [check,setcheck] =useState("")
     const [titulo, settitulo] =useState("")
     const [subtitulo, setsubtitulo] =useState("")
+    const [loadig, setloadig] =useState(false)
     function cadastrar(){
         if(csenha=== "" || senha === "" || username === ""){
             seterro(true)
@@ -24,6 +26,7 @@ export default function Home() {
             setsubtitulo("Preencha todos os campos")
         }
         else{
+            setloadig(true)
             Axios.post("api/auth/register", {username: username, password:senha})
             .then( res =>{
                 if("token" in res.data){
@@ -47,6 +50,7 @@ export default function Home() {
 
   return (
     <body>
+    <Loading status={loadig}></Loading>
       <div className="principal">
             <Popup status={erro}>
                 <p className="titulo">{titulo}</p>

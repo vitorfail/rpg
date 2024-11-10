@@ -1,0 +1,86 @@
+.loading{
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+    background: rgba(51, 29, 0, 0.685);
+    overflow: hidden;
+}
+.loading.show{
+    display: flex;
+}
+.loading-espadas{
+    position: relative;
+    height: 24%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.loading-espadas p{
+    position: absolute;
+    content: "Carregando...";
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 35px;
+    border: 0;
+    color: #ffac00;
+}
+.loading-espadas::before{
+    display: flex;
+    content: "";
+    outline: 2px dashed rgb(255, 162, 56);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: rodar-loading 2s ease-in-out infinite;
+}
+.loading-espadas svg rect, .loading-espadas svg circle{
+    fill:#ffac00 ;
+}
+@keyframes rodar-loading {
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+.loading-espadas svg:nth-child(1){
+    opacity: 0;
+    transform: rotateZ(45deg);
+    animation: espada-esquerda 1s ease-in-out 0s forwards;
+}
+.loading-espadas svg:nth-child(2){
+    opacity: 0;
+    transform: rotateZ(-45deg);
+    animation: espada-direita 1s ease-in-out 0s forwards;
+}
+@keyframes espada-esquerda {
+    0%{
+        transform: translateX(-500px) translatey(500px) rotateZ(45deg);
+    }
+    100%{
+        transform: translateX(0px) translatey(0px) rotateZ(45deg);
+        opacity: 1;
+    }
+}
+@keyframes espada-direita {
+    0%{
+        transform: translateX(500px) translatey(500px) rotateZ(-45deg);
+    }
+    100%{
+        transform: translateX(0px) translatey(0px) rotateZ(-45deg);
+        opacity: 1;
+    }
+}
