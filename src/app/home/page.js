@@ -7,7 +7,7 @@ import Barba3 from "./barba3.png"
 import Espada from "./espada.png"
 import classes from "../jsons/classes.json"
 import Linha from "./linha.png"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Orcs_homen_Bruxo from "../components/personagens/orcs/homen/bruxo";
 import Orcs_mulher_Bruxo from "../components/personagens/orcs/mulher/bruxo";
 import Orcs_homen_Monge from "../components/personagens/orcs/homen/monge";
@@ -54,15 +54,19 @@ export default function Home() {
       "sabedoria":sabedoria,
       "carisma":carisma
   }
+  useEffect(()=>{
+    setpergaminho("Barbaro")
+  },[])
   function selecionar_classe(nome){
     setpergaminho(nome)
     setdescri(classes[nome].descri)
     setarque(classes[nome].arquetipo)
     setimagem(classes[nome].img)
-    setsubclasse(Object.values(classes[nomeDaClasse].arquetipo).map((arquetipo) => arquetipo.nome))
+    console.log(arque["1_"])
   }
   function selecionar_arquetipo(nome){
     setsubclasse(nome)
+    console.log(nome)
   }
   function hexToRgb(hex){
     hex = hex.replace('#', '');
@@ -144,7 +148,7 @@ export default function Home() {
               <p>{descri}</p>
               <p>Sub-Classes:</p>
               {pergaminho ===""?"":
-              Object.keys(classes[pergaminho].arquetipo).map((item, key) => (<p className="historia" key={key}><strong>{item}</strong></p>))}
+              Object.keys(classes[pergaminho].arquetipo).map((item, key) => (<p className="historia" key={key}><strong>{arque[item].nome}</strong></p>))}
             </div>
           </div>
           <div id={proximo==2?"menu":""} className="menu">
@@ -156,7 +160,7 @@ export default function Home() {
                   Object.keys(classes[pergaminho].arquetipo).map((item, key) => (
                     <div key={key} className="item" id={subclasse==item?"show": ""} onClick={()=> selecionar_arquetipo(item)} >
                       <Image alt="icon" src={classes[pergaminho].img} width={80} height={80} ></Image>
-                      <p>{item}</p>
+                      <p>{arque[item].nome}</p>
                     </div>
                   ))
                 }
@@ -174,7 +178,7 @@ export default function Home() {
               <Image alt="image"  src={imagem} width={100} height={100}/>
               <p>Descrição</p>
               <p>{subclasse ==""?"":
-              (classes[pergaminho].arquetipo)[subclasse].text[0]}</p>
+              (classes[pergaminho].arquetipo)[subclasse].text}</p>
             </div>
           </div>
           <div id={proximo==3?"menu":""} className="custom">
