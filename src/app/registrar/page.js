@@ -32,8 +32,15 @@ export default function Home() {
                 if("token" in res.data){
                     router.push("/home")
                 }
+                else{
+                    setloadig(false)
+                    seterro(true)
+                    settitulo("Usuário já existe")
+                    setsubtitulo("Escolha outro nome")
+                }
             })
             .catch( er =>{
+
                 console.log(er)
             })    
         }
