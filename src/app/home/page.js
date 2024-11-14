@@ -17,7 +17,7 @@ import Orcs_homen_Monge from "../components/personagens/orcs/homen/monge";
 export default function Home() {
   const [descri, setdescri] = useState("")
   const[pergaminho, setpergaminho] = useState("Barbaro")
-  const [arque, setarque] = useState("")
+  const [arque, setarque] = useState(classes["Barbaro"].arquetipo)
   const [imagem,setimagem] = useState("")
   const [popup,setpopup] = useState(false)
   const [ proximo, setproximo] = useState(1)
@@ -55,18 +55,15 @@ export default function Home() {
       "carisma":carisma
   }
   useEffect(()=>{
-    setpergaminho("Barbaro")
   },[])
   function selecionar_classe(nome){
     setpergaminho(nome)
     setdescri(classes[nome].descri)
     setarque(classes[nome].arquetipo)
     setimagem(classes[nome].img)
-    console.log(arque["1_"])
   }
   function selecionar_arquetipo(nome){
     setsubclasse(nome)
-    console.log(nome)
   }
   function hexToRgb(hex){
     hex = hex.replace('#', '');
@@ -159,7 +156,7 @@ export default function Home() {
                 {
                   Object.keys(classes[pergaminho].arquetipo).map((item, key) => (
                     <div key={key} className="item" id={subclasse==item?"show": ""} onClick={()=> selecionar_arquetipo(item)} >
-                      <Image alt="icon" src={classes[pergaminho].img} width={80} height={80} ></Image>
+                      <Image alt="icon" src={arque[item].img} width={80} height={80} ></Image>
                       <p>{arque[item].nome}</p>
                     </div>
                   ))
