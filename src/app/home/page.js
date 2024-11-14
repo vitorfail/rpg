@@ -181,7 +181,7 @@ export default function Home() {
           <div id={proximo==3?"menu":""} className="custom">
             <div className="personagem">
             <div className="avatar">
-                <Orcs_homen_Monge cor_da_pele={cor_pele} cor_roupa={cor_roupa} cor_cabelo={cor_cabelo} cor_roupa_escura={cor_roupa_escura} ></Orcs_homen_Monge>
+                <Orcs_mulher_Bruxo cor_da_pele={cor_pele} cor_roupa={cor_roupa} cor_cabelo={cor_cabelo} cor_roupa_escura={cor_roupa_escura} ></Orcs_mulher_Bruxo>
               </div>
               </div>
             <div className="opcoes">
