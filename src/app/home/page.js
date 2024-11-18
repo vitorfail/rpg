@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import dynamic from 'next/dynamic';
 import "./page.css"
 import Barba from "./barba.png"
 import Barba2 from "./barba2.png"
@@ -8,17 +9,11 @@ import Espada from "./espada.png"
 import classes from "../jsons/classes.json"
 import Linha from "./linha.png"
 import { useEffect, useState } from "react";
-import Orcs_homen_Bruxo from "../components/personagens/orcs/homen/bruxo";
-import Orcs_mulher_Bruxo from "../components/personagens/orcs/mulher/bruxo";
-import Orcs_homen_Monge from "../components/personagens/orcs/homen/monge";
-import Orcs_mulher_Ladino from "../components/personagens/orcs/mulher/ladino";
-import Orcs_homem_Ladino from "../components/personagens/orcs/homen/ladino";
-
 
 
 export default function Home() {
   const [descri, setdescri] = useState("")
-  const[pergaminho, setpergaminho] = useState("Barbaro")
+  const[pergaminho, setpergaminho] = useState("ladino")
   const [arque, setarque] = useState(classes["Barbaro"].arquetipo)
   const [imagem,setimagem] = useState("")
   const [popup,setpopup] = useState(false)
@@ -34,7 +29,8 @@ export default function Home() {
   const [nome, setnome] = useState("")
   const [classe, setclasse] = useState("")
   const [ subclasse, setsubclasse] = useState("")
-  const [raca, setraca] = useState("")
+  const [raca, setraca] = useState("orc")
+  const [sexo, setsexo] = useState("mulher")
   const [forca, setforca] = useState("")
   const [destreza, setdestreza] = useState("")
   const [constituicao, setconstituicao] = useState("")
@@ -110,6 +106,20 @@ export default function Home() {
   function escolher(){
      setmenu_opcoes(true)
   }
+  const [personagem, setPersonagem] = useState(null);
+
+  // Função para importar dinamicamente o personagem baseado no número
+  const carregarPersonagem = (num) => {
+    return dynamic(() => import(`../components/personagens/${raca}/${sexo}/${pergaminho}`));
+  };
+
+  // Função para lidar com a escolha do personagem
+  const handleSelectPersonagem = (num) => {
+    setPersonagem(num);
+  };
+
+  const PersonagemEscolhido = personagem ? carregarPersonagem(personagem) : null;
+
   return (
     <body suppressHydrationWarning>
         <div className={popup?"popup_ok show":"popup_ok"} >
@@ -186,7 +196,7 @@ export default function Home() {
           <div id={proximo==3?"menu":""} className="custom">
             <div className="personagem">
             <div className="avatar">
-                <Orcs_homem_Ladino cor_da_pele={cor_pele} cor_roupa={cor_roupa} cor_cabelo={cor_cabelo} cor_roupa_escuro={cor_roupa_escura} ></Orcs_homem_Ladino>
+                {PersonagemEscolhido && <PersonagemEscolhido  cor_da_pele={cor_pele} cor_roupa={cor_roupa} cor_cabelo={cor_cabelo} cor_roupa_escuro={cor_roupa_escura} />}
               </div>
               </div>
             <div className={menu_opcoes == true?"opcoes.show":"opcoes"}>
