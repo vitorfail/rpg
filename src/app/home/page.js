@@ -25,6 +25,7 @@ export default function Home() {
   const [ proximo, setproximo] = useState(1)
   const [ barba, setbarba] = useState("")
   const [ roupa, setroupa] = useState("")
+  const [ menu_opcoes, setmenu_opcoes] = useState(false)
   //personagem
   const [cor_cabelo, setcor_cabelo] =useState([0,0,0])
   const [cor_pele, setcor_pele] =useState("#FF0000")  
@@ -106,7 +107,9 @@ export default function Home() {
     // Retornar o valor hex escurecido
     setcor_roupa_escura("#"+String(r)+String(g)+String(b));
   }
-
+  function escolher(){
+     setmenu_opcoes(true)
+  }
   return (
     <body suppressHydrationWarning>
         <div className={popup?"popup_ok show":"popup_ok"} >
@@ -186,36 +189,27 @@ export default function Home() {
                 <Orcs_homem_Ladino cor_da_pele={cor_pele} cor_roupa={cor_roupa} cor_cabelo={cor_cabelo} cor_roupa_escuro={cor_roupa_escura} ></Orcs_homem_Ladino>
               </div>
               </div>
-            <div className="opcoes">
+            <div className={menu_opcoes == true?"opcoes.show":"opcoes"}>
               <p className="titulo">Opções</p>
               <div className="cor">
                 <div className="colum">
                   <p>Pele</p>
-                  <input type="color" onChange={(e) => mudar_pele(e.target.value)}></input>
+                  <input type="color" onChange={(e) => mudar_pele(e.target.value)} value={cor_pele}></input>
                 </div>
                 <div className="colum">
                   <p>Roupa</p>
-                  <input type="color" onChange={(e) => darkenColor(e.target.value, 20)}></input>
+                  <input type="color" onChange={(e) => darkenColor(e.target.value, 20)} value={cor_roupa}></input>
                 </div>
                 <div className="colum">
                   <p>Cabelo</p>
-                  <input type="color" onChange={(e) => mudar_cabelo(e.target.value)}></input>
+                  <input type="color" onChange={(e) => mudar_cabelo(e.target.value)} value={cor_cabelo} ></input>
                 </div>
               </div>
-                <div className="selecionar">
-                  <p>Barbas</p>
-                  <div className="cor">
-                    <Image onClick={() => setbarba("barba1")}alt="image" width={40} height={40} src={Barba} ></Image>
-                    <Image onClick={() => setbarba("barba2")}alt="image" width={40} height={40} src={Barba2} ></Image>
-                    <Image onClick={() => setbarba("barba3")}alt="image" width={40} height={40} src={Barba3} ></Image>
-                  </div>
+              <div className="cor">
+                <div className="button">
+                    <button onClick={() => escolher()} >Escolher</button>
                 </div>
-                <p>Roupas</p>
-                <div className="cor">
-                  <Image onClick={() => setroupa("roupa1")}alt="image" width={40} height={40} src={Barba} ></Image>
-                  <Image onClick={() => setroupa("roupa2")}alt="image" width={40} height={40} src={Barba2} ></Image>
-                  <Image onClick={() => setroupa("roupa3")}alt="image" width={40} height={40} src={Barba3} ></Image>
-                </div>
+              </div>
             </div>
           </div>        
         </div>
