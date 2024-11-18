@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import Orcs_homen_Bruxo from "../components/personagens/orcs/homen/bruxo";
 import Orcs_mulher_Bruxo from "../components/personagens/orcs/mulher/bruxo";
 import Orcs_homen_Monge from "../components/personagens/orcs/homen/monge";
+import Orcs_mulher_Ladino from "../components/personagens/orcs/mulher/ladino";
+import Orcs_homem_Ladino from "../components/personagens/orcs/homen/ladino";
 
 
 
@@ -92,9 +94,9 @@ export default function Home() {
     let b = parseInt(hex.substring(4, 6), 16);
   
     // Reduzir cada componente RGB para escurecer a cor
-    r = Math.max(0, r - (r * percent / 100));
-    g = Math.max(0, g - (g * percent / 100));
-    b = Math.max(0, b - (b * percent / 100));
+    r = Math.max(0, r - (r * percent / 200));
+    g = Math.max(0, g - (g * percent / 10));
+    b = Math.max(0, b - (b * percent / 500));
   
     // Converter de volta para hex
     r = Math.round(r).toString(16).padStart(2, '0');
@@ -102,7 +104,7 @@ export default function Home() {
     b = Math.round(b).toString(16).padStart(2, '0');
   
     // Retornar o valor hex escurecido
-    setcor_roupa_escura(`#${r}${g}${b}`);
+    setcor_roupa_escura("#"+String(r)+String(g)+String(b));
   }
 
   return (
@@ -181,7 +183,7 @@ export default function Home() {
           <div id={proximo==3?"menu":""} className="custom">
             <div className="personagem">
             <div className="avatar">
-                <Orcs_mulher_Bruxo cor_da_pele={cor_pele} cor_roupa={cor_roupa} cor_cabelo={cor_cabelo} cor_roupa_escura={cor_roupa_escura} ></Orcs_mulher_Bruxo>
+                <Orcs_homem_Ladino cor_da_pele={cor_pele} cor_roupa={cor_roupa} cor_cabelo={cor_cabelo} cor_roupa_escuro={cor_roupa_escura} ></Orcs_homem_Ladino>
               </div>
               </div>
             <div className="opcoes">
