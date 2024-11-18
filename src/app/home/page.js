@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [descri, setdescri] = useState("")
-  const[pergaminho, setpergaminho] = useState("ladino")
+  const[pergaminho, setpergaminho] = useState("Barbaro")
   const [arque, setarque] = useState(classes["Barbaro"].arquetipo)
   const [imagem,setimagem] = useState("")
   const [popup,setpopup] = useState(false)
@@ -29,7 +29,7 @@ export default function Home() {
   const [nome, setnome] = useState("")
   const [classe, setclasse] = useState("")
   const [ subclasse, setsubclasse] = useState("")
-  const [raca, setraca] = useState("orc")
+  const [raca, setraca] = useState("orcs")
   const [sexo, setsexo] = useState("mulher")
   const [forca, setforca] = useState("")
   const [destreza, setdestreza] = useState("")
@@ -128,7 +128,7 @@ export default function Home() {
             <p>Pense bem ao escolher sua classe. Pois não podera mudá-la. Deseja escolha essa classe?</p>
             <div className="botoes">
               <div className="button">
-                <button onClick={() => {setproximo(3); setpopup(false)}}>Sim</button>
+                <button onClick={() => {setproximo(3); setpopup(false); handleSelectPersonagem("1")}}>Sim</button>
               </div>
               <div className="button">
                 <button onClick={() => setpopup(false)} id="n">Não</button>
