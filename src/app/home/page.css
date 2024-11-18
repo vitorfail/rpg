@@ -261,7 +261,7 @@
     padding: 120px;
     width: 700px;
     height: 400px;
-    background: url("../img/up.png");
+    background: url("./pano1.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
