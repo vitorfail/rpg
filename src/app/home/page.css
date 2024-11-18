@@ -213,7 +213,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-image: url("descri.jpg");
+    background-image: url("descri.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -239,32 +239,6 @@
     margin-bottom: 20px;
     text-align: center;
     width: 90%;
-}
-.descri::after{
-    transform: rotateZ(90deg);
-    content: "";
-    background-image: url("borda.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-top: -110px;
-    margin-left: -520px;
-    width: 150px;
-    height: 420px;
-    position: absolute;
-    z-index: 1;
-}
-.descri::before{
-    transform: rotateZ(90deg) rotateX(180deg);
-    content: "";
-    background-image: url("borda.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-top: -110px;
-    margin-right: -520px;
-    width: 150px;
-    height: 420px;
-    position: absolute;
-    z-index: 1;
 }
 .popup_ok.show{
     display: flex;
