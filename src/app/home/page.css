@@ -135,31 +135,6 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;   
 }
-.classes::after{
-    pointer-events: none;
-    content: "";
-    background-image: url("borda.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-left: -55%;
-    width: 200px;
-    height: 90%;
-    position: absolute;
-    z-index: 1;
-}
-.classes::before{
-    pointer-events: none;
-    content: "";
-    transform: rotateY(180deg) rotateX(180deg);
-    background-image: url("borda.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    margin-right: -55%;
-    width: 200px;
-    height: 500px;
-    position: absolute;
-    z-index: 1;
-}
 .classes .titulo{
     margin-top: 30px;
     font-family: London;
