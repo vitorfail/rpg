@@ -216,6 +216,30 @@ export default function Home() {
                 </div>
               </div>
               <div className="cor">
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={sexo =="homem"? true:false}
+                    onChange={() => {
+                      setsexo("homem");
+                      handleSelectPersonagem("1");
+                    }}
+                  />
+                  Homem
+                </label>
+                                <label>
+                  <input
+                    type="checkbox"
+                    checked={sexo =="mulher"? true:false}
+                    onChange={() => {
+                      setsexo("mulher");
+                      handleSelectPersonagem("1");
+                    }}
+                  />
+                  Mulher
+                </label>
+              </div>
+              <div className="cor">
                 <div className="button">
                     <button onClick={() => escolher()} >Escolher</button>
                 </div>
