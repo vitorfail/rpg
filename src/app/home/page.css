@@ -49,6 +49,10 @@
 .custom .opcoes.show{
   animation: sair_opcoes 1s ease-in-out 0s forwards;
 }
+.custom .opcoes .check{
+  width: 40px;
+  height: 40px;
+}
 @keyframes sair_opcoes {
   0%{
     transform: translateX(0px);
