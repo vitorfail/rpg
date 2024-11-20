@@ -31,12 +31,13 @@ export default function Home() {
   const [ subclasse, setsubclasse] = useState("")
   const [raca, setraca] = useState("orcs")
   const [sexo, setsexo] = useState("mulher")
-  const [forca, setforca] = useState("")
-  const [destreza, setdestreza] = useState("")
-  const [constituicao, setconstituicao] = useState("")
-  const [inteligencia, setinteligencia] = useState("")
-  const [sabedoria, setsabedoria] = useState("")
-  const [carisma, setcarisma] = useState("")
+  const [pontos_totais, setpontos_totais] = useState(0)
+  const [forca, setforca] = useState(0)
+  const [destreza, setdestreza] = useState(0)
+  const [constituicao, setconstituicao] = useState(0)
+  const [inteligencia, setinteligencia] = useState(0)
+  const [sabedoria, setsabedoria] = useState(0)
+  const [carisma, setcarisma] = useState(0)
   const caracter ={
       "nome":nome,
       "classe":classe,
@@ -105,6 +106,7 @@ export default function Home() {
   }
   function escolher(){
      setmenu_opcoes(true)
+     setproximo(4)
   }
   const [personagem, setPersonagem] = useState(null);
 
@@ -193,13 +195,43 @@ export default function Home() {
               (classes[pergaminho].arquetipo)[subclasse].text}</p>
             </div>
           </div>
-          <div id={proximo==3?"menu":""} className="custom">
+          <div className={proximo==4?"pontos show":"pontos"}>
+              <p className="titulo">Distribua Seus Pontos Iniciais</p>
+              <p className="total_de_pontos">{pontos_totais}pts</p>
+              <div className="distribuicao_pontos">
+                <div className="cont">
+                  <p>{forca}</p>
+                  <p>-5</p>
+                </div>
+                <div className="cont">
+                  <p>{destreza}</p>
+                  <p>-5</p>
+                </div>
+                <div className="cont">
+                  <p>{constituicao}</p>
+                  <p>-5</p>
+                </div>
+                <div className="cont">
+                  <p>{inteligencia}</p>
+                  <p>-5</p>
+                </div>
+                <div className="cont">
+                  <p>{sabedoria}</p>
+                  <p>-5</p>
+                </div>
+                <div className="cont">
+                  <p>{carisma}</p>
+                  <p>-5</p>
+                </div>
+              </div>
+            </div>
+          <div id={proximo==3||proximo==4?"menu":""} className="custom">
             <div className="personagem">
             <div className="avatar">
                 {PersonagemEscolhido && <PersonagemEscolhido  cor_da_pele={cor_pele} cor_roupa={cor_roupa} cor_cabelo={cor_cabelo} cor_roupa_escuro={cor_roupa_escura} />}
               </div>
               </div>
-            <div className={menu_opcoes == true?"opcoes.show":"opcoes"}>
+            <div className={menu_opcoes == true?"opcoes show":"opcoes"}>
               <p className="titulo">Opções</p>
               <div className="cor">
                 <div className="colum">

@@ -1,11 +1,4 @@
-@font-face {
-    font-family: Sea;
-    src: url("../font/Seagram.ttf");
-}
-@font-face {
-    font-family: London;
-    src: url("../font/OldLondon.ttf");
-}
+
 :root{
     --cabelo-r:34;
     --cabelo-g:45;
@@ -32,6 +25,68 @@
     height: 90%;
     width: 70%;
 }
+@keyframes pontos {
+  0%{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.pontos.show{
+  display: flex;
+  animation: pontos 1s ease-in-out 0s forwards;
+}
+.pontos .distribuicao_pontos{
+  width: 80%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.pontos .distribuicao_pontos .cont p:nth-child(1){
+  font-size: 40px;
+}
+.pontos .distribuicao_pontos .cont p:nth-child(2){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70%;
+  height: 40px;
+  width: 100%;
+  background: white;
+  border: 2px solid black;
+}
+.pontos .distribuicao_pontos .cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 2px solid black;
+  width: 10%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.pontos{
+  position: fixed;
+  border: 7px double rgb(110, 57, 0);
+  box-shadow: inset 0px 0px 145px rgba(204, 201, 0, 0.527);
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 70%;
+  height: 30%;
+  top: 0px;
+  background: url("descri.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat; 
+}
+.custom.show{
+  flex-direction: column;
+}
 .custom p{
     width: 100%;
     text-align: center;
@@ -43,10 +98,14 @@
     font-family: London;
 }
 .custom .personagem{
+  display: flex;
+  justify-content: center;
     width: 70%;
     height: 100%;
 }
 .custom .opcoes.show{
+  position: relative;
+  transition: all 0.2s;
   animation: sair_opcoes 1s ease-in-out 0s forwards;
 }
 .custom .opcoes .check{
@@ -59,14 +118,23 @@
   }
   80%{
     transform: translateX(350px);
+    width: 0px;
   }
-  80%{
+  90%{
     transform: translateX(350px);
     opacity: 0;
-    width: 0px;
+    display: none;
+  }
+  100%{
+    transform: translateX(350px);
+    opacity: 0;
+    display: none;
+
   }
 }
 .custom .opcoes{
+  transition: all 0.2s;
+  display: flex;
     background-image: url("pano1.svg");
     background-position: center;
     background-size: cover;
@@ -104,6 +172,7 @@
 .inicio{
     box-shadow: inset 0px 0px 44px black;
     overflow-y: auto;
+    overflow-x: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -388,7 +457,7 @@ svg:not(:root) {
   .avatar {
     width: calc(var(--unit) * 597);
     height: calc(var(--unit) * 892);
-    position: fixed;
+    position: relative;
     opacity: 1.5;
     top: 65%;
     left: 30%;
