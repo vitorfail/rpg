@@ -215,28 +215,48 @@ export default function Home() {
                   <input type="color" onChange={(e) => mudar_cabelo(e.target.value)} value={cor_cabelo} ></input>
                 </div>
               </div>
-              <div className="cor">
-                <label>
-                  <input
+              <div className="cor" id="sexo">
+                <div
                     type="checkbox"
                     checked={sexo =="homem"? true:false}
                     onChange={() => {
                       setsexo("homem");
                       handleSelectPersonagem("1");
-                    }}
-                  />
-                  Homem
+                    }}>
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                      <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                      <path d="M2270 5107 c-37 -10 -60 -44 -96 -149 -34 -96 -62 -126 -161 -169 -330 -142 -523 -353 -610 -669 -16 -57 -18 -110 -18 -453 l0 -389 -36 -18 c-81 -42 -143 -147 -143 -242 1 -127 59 -230 440 -778 229 -329 264 -382 264 -401 0 -51 -156 -218 -282 -302 -153 -102 -224 -133 -717 -308 -310 -111 -465 -194 -594 -318 -196 -188 -293 -434 -313 -793 l-7 -118 2563 0 2563 0 -7 118 c-29 521 -227 825 -661 1016 -44 20 -219 86 -390 147 -331 119 -442 168 -572 255 -131 87 -274 241 -276 297 -1 13 55 102 133 212 73 105 186 269 250 365 263 394 324 515 323 646 -1 92 -44 155 -128 185 l-35 13 5 270 c3 149 8 293 10 321 17 182 -62 438 -185 605 -184 247 -683 547 -1060 637 -85 20 -220 31 -260 20z"/>
+                      </g>
+                      </svg>
+                </div>
+                  <div
+                        type="checkbox"
+                        checked={sexo =="mulher"? true:false}
+                        onChange={() => {
+                          setsexo("mulher");
+                          handleSelectPersonagem("1");
+                        }}
+                      />
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M2400 5101 c-231 -50 -451 -168 -626 -334 -181 -171 -293 -340 -378 -569 -80 -214 -104 -366 -116 -719 -12 -369 -36 -562 -101 -807 -60 -229 -156 -424 -271 -547 -49 -55 -62 -88 -48 -131 14 -43 46 -65 170 -119 183 -80 444 -158 658 -196 41 -7 76 -17 78 -23 2 -6 -6 -49 -19 -96 l-22 -85 -456 -115 c-459 -116 -550 -145 -674 -218 -253 -149 -444 -386 -534 -661 -52 -159 -75 -365 -47 -419 35 -67 -180 -62 2546 -62 2726 0 2511 -5 2546 62 14 26 15 49 10 120 -28 404 -245 756 -591 960 -124 73 -215 102 -674 218 l-456 115 -22 85 c-13 47 -21 90 -19 96 2 6 37 16 78 23 203 37 456 111 636 188 141 60 178 84 191 126 15 44 3 77 -47 132 -235 254 -371 770 -372 1405 -1 620 -111 1058 -313 1246 -83 77 -161 111 -288 126 l-104 12 -65 53 c-126 104 -238 141 -450 148 -108 4 -152 1 -220 -14z"/>
+</g>
+</svg>
+                  </div>
+              <div className="cor">
+              <label><input type="checkbox" checked={sexo =="mulher"? true:false} onChange={() => { setsexo("mulher"); handleSelectPersonagem("1"); }}/>
+                  Humans
                 </label>
-                                <label>
-                  <input
-                    type="checkbox"
-                    checked={sexo =="mulher"? true:false}
-                    onChange={() => {
-                      setsexo("mulher");
-                      handleSelectPersonagem("1");
-                    }}
-                  />
-                  Mulher
+                <label><input type="checkbox" checked={sexo =="mulher"? true:false} onChange={() => { setsexo("mulher"); handleSelectPersonagem("1"); }}/>
+                  Orcs
+                </label>
+                <label><input type="checkbox" checked={sexo =="mulher"? true:false} onChange={() => { setsexo("mulher"); handleSelectPersonagem("1"); }}/>
+                  Elfos
+                </label>
+                <label><input type="checkbox" checked={sexo =="mulher"? true:false} onChange={() => { setsexo("mulher"); handleSelectPersonagem("1"); }}/>
+                  Anjos
                 </label>
               </div>
               <div className="cor">
