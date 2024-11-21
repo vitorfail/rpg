@@ -31,7 +31,7 @@ export default function Home() {
   const [ subclasse, setsubclasse] = useState("")
   const [raca, setraca] = useState("orcs")
   const [sexo, setsexo] = useState("mulher")
-  const [pontos_totais, setpontos_totais] = useState(0)
+  const [pontos_totais, setpontos_totais] = useState(27)
   const [forca, setforca] = useState(0)
   const [destreza, setdestreza] = useState(0)
   const [constituicao, setconstituicao] = useState(0)
@@ -104,6 +104,18 @@ export default function Home() {
     // Retornar o valor hex escurecido
     setcor_roupa_escura("#"+String(r)+String(g)+String(b));
   }
+  function retirar(status, setstatus){
+    if(status >0){
+      setpontos_totais(pontos_totais+1)
+      setstatus(status-1)  
+    }
+  }
+  function acrescentar(status ,setstatus){
+    if(pontos_totais>0){
+      setpontos_totais(pontos_totais-1)
+      setstatus(status+1)  
+    }
+  }
   function escolher(){
      setmenu_opcoes(true)
      setproximo(4)
@@ -121,7 +133,56 @@ export default function Home() {
   };
 
   const PersonagemEscolhido = personagem ? carregarPersonagem(personagem) : null;
-
+  function modificador(ponto){
+    if(ponto== 0 ||ponto== 1){
+      return -5
+    }
+    if(ponto== 2 ||ponto== 3){
+      return -4
+    }
+    if(ponto== 4 ||ponto== 5){
+      return -3
+    }
+    if(ponto== 6 ||ponto== 7){
+      return -2
+    }
+    if(ponto== 8 ||ponto== 9){
+      return -1
+    }
+    if(ponto== 10 ||ponto== 11){
+      return 0
+    }
+    if(ponto== 12 ||ponto== 13){
+      return +1
+    }
+    if(ponto== 14 ||ponto== 15){
+      return +2
+    }
+    if(ponto== 16 ||ponto== 17){
+      return +3
+    }
+    if(ponto== 18 ||ponto== 19){
+      return +4
+    }
+    if(ponto== 20 ||ponto== 21){
+      return +5
+    }
+    if(ponto== 22 ||ponto== 23){
+      return +6
+    }
+    if(ponto== 24 ||ponto== 25){
+      return +7
+    }
+    if(ponto== 26 ||ponto== 27){
+      return +8
+    }
+    if(ponto== 28 ||ponto== 29){
+      return +9
+    }
+    if(ponto== 30){
+      return +10
+    }
+  }
   return (
     <body suppressHydrationWarning>
         <div className={popup?"popup_ok show":"popup_ok"} >
@@ -197,31 +258,46 @@ export default function Home() {
           </div>
           <div className={proximo==4?"pontos show":"pontos"}>
               <p className="titulo">Distribua Seus Pontos Iniciais</p>
+              <p>A distibuição inicial de pontos é de extrema importância. Você tem 27 pontos para distribuir entra os atributos. Pois só 
+                ganhará pontos novamente em 5 estágios. Nível 4, Nível 8, Nível 12, Nível 16 e Nível 20(Com excessão da classe Guerreiro, que ganha a cada 2 níveis)
+                . Lembres-se de focar no atributo da sua classe </p>
               <p className="total_de_pontos">{pontos_totais}pts</p>
               <div className="distribuicao_pontos">
                 <div className="cont">
+                  <span onClick={() => retirar(forca, setforca)} ></span>
+                  <span onClick={() => acrescentar(forca, setforca)}></span>
                   <p>{forca}</p>
-                  <p>-5</p>
+                  <p>{modificador(forca)}</p>
                 </div>
                 <div className="cont">
+                  <span onClick={() => retirar(destreza, setdestreza)} ></span>
+                  <span onClick={() => acrescentar(destreza, setdestreza)}></span>
                   <p>{destreza}</p>
-                  <p>-5</p>
+                  <p>{modificador(destreza)}</p>
                 </div>
                 <div className="cont">
+                  <span onClick={() => retirar(constituicao, setconstituicao)} ></span>
+                  <span onClick={() => acrescentar(constituicao, setconstituicao)}></span>
                   <p>{constituicao}</p>
-                  <p>-5</p>
+                  <p>{modificador(constituicao)}</p>
                 </div>
                 <div className="cont">
+                  <span onClick={() => retirar(inteligencia, setinteligencia)} ></span>
+                  <span onClick={() => acrescentar(inteligencia, setinteligencia)}></span>
                   <p>{inteligencia}</p>
-                  <p>-5</p>
+                  <p>{modificador(inteligencia)}</p>
                 </div>
                 <div className="cont">
+                  <span onClick={() => retirar(sabedoria, setsabedoria)} ></span>
+                  <span onClick={() => acrescentar(sabedoria, setsabedoria)}></span>
                   <p>{sabedoria}</p>
-                  <p>-5</p>
+                  <p>{modificador(sabedoria)}</p>
                 </div>
                 <div className="cont">
+                  <span onClick={() => retirar(carisma, setcarisma)} ></span>
+                  <span onClick={() => acrescentar(carisma, setcarisma)}></span>
                   <p>{carisma}</p>
-                  <p>-5</p>
+                  <p>{modificador(carisma)}</p>
                 </div>
               </div>
             </div>
