@@ -13,8 +13,8 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [descri, setdescri] = useState("")
-  const[pergaminho, setpergaminho] = useState("Barbaro")
-  const [arque, setarque] = useState(classes["Barbaro"].arquetipo)
+  const[pergaminho, setpergaminho] = useState("barbaro")
+  const [arque, setarque] = useState(classes["barbaro"].arquetipo)
   const [imagem,setimagem] = useState("")
   const [popup,setpopup] = useState(false)
   const [ proximo, setproximo] = useState(1)

@@ -1,5 +1,5 @@
 {
-    "Barbaro":{
+    "barbaro":{
       "descri":
         "Os Bárbaros podem ser guerreiros que carregam a brutalidade da sobrevivência na natureza ou até mesmo ser o possuidor de conhecimento de espíritos ancestrais. Eles são lutadores bastante poderosos, que utilizam da fúria que faz seu poder e força aumentarem em combate. Além de causarem muito dano, os Bárbaros também conseguem aguentar dano, sendo muitas vezes os tanques da equipe, eles também podem sentir o perigo através dos seus sentidos.",
         "arquetipo":{
@@ -11,7 +11,7 @@
       },
          "img":"/imgs_classes/barbaro.png"
     },
-    "Bardo":{
+    "bardo":{
       "descri":"Artistas conhecedores das histórias do mundo, Bardos são capazes de realizar magia a partir de suas obras, seja com música, pintura ou até mesmo um breve discurso. Bardos são especialistas na manipulação não apenas mágica, mas também em tocar o coração dos alvos das mais variadas formas a partir de suas técnicas.",
       "arquetipo":{
         "1_":{"img":"/arquetipos/bardo1.svg","nome":"Colégio do Conhecimento", "text":"Bardos do Colégio do Conhecimento conhecem algo sobre a maioria das coisas, coletando pedaços de conhecimento de fontes tão diversas quanto tomos eruditos ou contos de camponeses. Quer seja cantando baladas populares em taverna, quer seja elaborando composições para cortes reais, esses bardos usam seus dons para manter a audiência enfeitiçada. Quando os aplausos acabam, os membros da audiência vão estar se questionando se tudo que eles creem é verdade, desde sua crença no sacerdócio do templo local até sua lealdade ao rei. A fidelidade desses bardos reside na busca pela beleza e verdade, não na lealdade a um monarca ou em seguir os dogmas de uma divindade. Um nobre que mantem um bardo desses como seu arauto ou conselheiro, sabe que o bardo prefere ser honesto que político. Os membros do colégio se reúnem em bibliotecas e, as vezes, em faculdades de verdade, completas com salas de aula e dormitórios, para partilhar seu conhecimento uns com os outros. Eles também se encontram em festivais ou em assuntos de estado, onde eles podem expor corrupção, desvendar mentiras e zombar da superestima de figuras de autoridade. "},
@@ -20,7 +20,7 @@
     },
       "img":"/imgs_classes/bardo.png"
     },
-    "Bruxo":{
+    "bruxo":{
       "descri":"Entidades ancestrais aguardam nos limites da compreensão mortal aqueles com coragem o suficiente para adquirir poder e, a partir de um pacto, você foi um deles. Bruxos se tornam conjuradores arcanos a partir de pactos o que lhes dão além das magias capacidades únicas e úteis tanto ofensivamente, quanto para suporte.",
       "arquetipo":{
         "1_":{"img":"/arquetipos/bruxo1.svg","nome":"Pacto da Corrente", "text":"Você aprende a magia convocar familiar e pode conjurá-la como um ritual. Essa magia não conta no número de magias que você conhece. Quando você conjura essa magia, você pode escolher uma das formas convencionais para o seu familiar ou uma das seguintes formas especiais: diabrete, pseudodragão, quasit ou sprite. Além disso, quando você realiza a ação de Ataque, você pode renunciar s um dos seus ataques para permitir que seu familiar realize um ataque, com a reação dele."},
@@ -29,7 +29,7 @@
     },
       "img":"/imgs_classes/bruxo.png"
     },
-    "Clerigo":{
+    "clerigo":{
       "descri":"Servos dos Deuses e outras entidades Divinas, Clérigos são capazes de realizar verdadeiros milagres por onde passam.Dependendo do cenário utilizado, podem tomar as mais variadas formas, pois seus poderes e motivações são ligados a cosmogonia de cada universo, indo de servos de deuses bondosos ou completamente malignos.",
        "arquetipo":{
         "1_":{"img":"/arquetipos/clerigo1.svg", "nome":"Domínio do Conhecimento", "text":"Os deuses do conhecimento – como Oghma, Boccob, Gilean, Aureon e Thoth – valorizam o estudo e compreensão acima de tudo. Alguns ensinam que o conhecimento deve ser coletado e partilhado em bibliotecas e universidades ou promovem o conhecimento prático do artesanato e da invenção. Algumas divindades escondem conhecimentos e os mantém em segredo para si mesmos. E outros prometem a seus seguidores que eles ganharão poderes tremendos se desvendarem os segredos do multiverso. Os seguidores desses deuses estudam conhecimento exotérico, coletam tomos antigos, escavam locais secretos da terra e aprendem tudo que podem. Alguns deuses do conhecimento que promovem a prática de ofícios e criação incluem deuses da forja como Gond, Reorx, Onatar, Moradin, Hefesto e Goibhniu."},
@@ -42,7 +42,7 @@
        },
         "img":"/imgs_classes/clerego.png"
     },
-    "Druida":{
+    "druida":{
       "descri":"Sábios e poderosos, druidas são conjurados divinos conectados diretamente com a natureza,  capaz de controlá-la ou tornar-se parte dela como animais, monstros e plantas diversas. Druidas misturam a versatilidade de quem controla a natureza, mas também as penalidades dequem não aceita a evolução trazida pela sociedade que afeta e muitas vezes destrói a origem de seus poderes.",
        "arquetipo":{
         "1_":{"img":"/arquetipos/druida1.svg","nome":"Círculo da Terra", "text":"O Círculo da Terra é constituído por místicos e sábios que salvaguardam conhecimento e ritos antigos através de uma vasta tradição oral. Esses druidas se encontram em círculos sagrados de árvores ou monólitos para sussurrar segredos primordiais em Druídico. Os membros mais sábios do círculo presidem como os sacerdotes-dirigentes de comunidades que creem na Crença Antiga, e servem como conselheiros para os governantes desses povos. Como membro desse círculo, sua magia é influenciada pela terra onde você é iniciado nos ritos misteriosos do círculo."},
@@ -51,7 +51,7 @@
        },
        "img":"/imgs_classes/clerego.png"
     },
-    "Guardiao":{
+    "guardiao":{
       "descri":"Também chamado de Ranger em outras edições, os Guardiões são especialistas em terrenos e alvos específicos. O Guardião é um aliado versátil e um inimigo mortal capaz de atravessar a natureza selvagem com facilidade e caçar seus inimigos marcados com técnica e eficiência.",
       "arquetipo": {
         "1_":{"img":"/arquetipos/ranger1.svg", "nome":"Caçador", "text":"Se você quiser uma subclasse que te permitirá lutar melhor, o caçador pode ser uma opção. Ao possuir opções de aumento de dano, acertar múltiplos alvos e redução do dano recebido, você se tornará um caçador à espreita de seu próximo alvo."},
@@ -60,7 +60,7 @@
       },
       "img":"/imgs_classes/guardiao.png"
     },
-    "Guerreiro":{
+    "guerreiro":{
       "descri":"Treinados em combate com as mais variadas armas e equipamentos, os Guerreiros são, provavelmente, a mais comum das classes existentes em D&D, pois englobam todos os aventureiros que não entrem nas demais categorias. Um guerreiro é tecnicamente a classe mais simples para novatos e uma das mais versáteis, capaz de se manter diversificado ou se especializar no uso de uma arma ou manobra específica.",
       "arquetipo":{
         "1_":{"img":"/arquetipos/guerreiro1.svg","nome":"Mestre de batalha", "text":"Aqueles que emulam o arquétipo de Mestre de Batalha empregam técnicas marciais passadas de geração em geração. Para um Mestre de Batalha, o combate é um campo acadêmico, as vezes, incluindo assuntos além da batalha, como forjaria e caligrafia. Nem todo guerreiro absorve as lições de história, teoria e arte que são refletidas no arquétipo de Mestre de Batalha, mas aqueles que conseguem, tornam-se guerreiros bemsupridos de grande perícia e conhecimento. "},
@@ -70,7 +70,7 @@
       ,
       "img":"/imgs_classes/guerreiro.png"
     },
-    "Ladino":{
+    "ladino":{
       "descri":"Mestres da furtividade, dos talentos ocultos e até mesmo do assassinato, muitos tratam o ladino como simples criminosos quando, na verdade, são aventureiros fundamentais para qualquer grupo. Ladinos possuem um conjunto próprio de técnicas focadas em arrombamento, manuseio de armadilhas, escalada, furto e técnicas que peguem o alvo desprevenido que sim, podem ser usadas para o mau caso queiram, mas também criam exploradores e aventureiros vitais para qualquer grupo dentro e fora de masmorras.",
       "arquetipo":{
         "1_":{"img":"/arquetipos/ladino1.svg","nome":"Assassino", "text":"Você focou seu treinamento na macabra arte da morte. Aqueles que devotam-se a esse arquétipo são diversos: assassinos de aluguel, espiões, caçadores de recompensa e, até mesmo, padres especialmente treinados em exterminar os inimigos das suas divindades. Subterfúgio, veneno e disfarces ajudam você a eliminar seus oponentes com eficiência mortífera"},
@@ -79,7 +79,7 @@
       },
       "img":"/imgs_classes/ladino.png"
     },
-    "Monge":{
+    "monge":{
       "descri":"Mestres no combate desarmado e no uso do misterioso Chi em habilidades únicas! O Monge é uma classe que foca sua força em rajadas de múltiplos ataques desarmados cada vez mais fortes, além de técnicas que misturam artes marciais com o consumo de Chi, uma energia que apenas ele possui no jogo.",
       "arquetipo":{
         "1_":{"img":"/arquetipos/monge1.svg","nome":"Caminho da Sombra", "text":"Monges do Caminho da Sombra seguem uma tradição que valoriza furtividade e subterfugio. Esses monges devem ser chamados de ninjas ou dançarinos das sombras e eles servem como espiões e assassinos. Às vezes, os membros de um monastério ninja são membros da mesma família, formando um clã que jurou sigilo sobre suas artes e missões. Outros monastérios parecem mais com guildas de ladrões, oferecendo seus serviços a nobres, mercadores ricos ou qualquer um que possa pagar suas taxas. Independente dos seus métodos, os líderes desses monastérios esperam obediência inquestionável de seus estudantes. "},
@@ -87,7 +87,7 @@
       },
         "img":"/imgs_classes/monge.png"
     },
-    "Mago":{
+    "mago":{
       "descri":"Estudiosos dedicados às regras arcanas, magos são os mais famosos usuários de magia, graças ao grande poder e versatilidade capazes de adquirir com o tempo. Magos misturam os diferentes caminhos da magia com as restrições de precisar decorá-las diariamente, um equilíbrio que torna o Mago poderoso, mas também uma posição complexa para qualquer equipe.",
       "arquetipo":{
         "1_":{"img":"/arquetipos/mago1.svg","nome":"Escola de Abjuração", "text":"A Escola de Abjuração enfatiza magias que bloqueiam, expulsão ou protegem. Detratores dessa escola dizem que sua tradição trata de contradição, negação, ao invés de asserções positivas. Você compreende, no entanto, que terminar efeitos nocivos, proteger os fracos e banir influências malignas é tudo, menos um vazio filosófico. É uma vocação de orgulho e respeito. Chamados de abjuradores, membros dessa escola são procurados quando espíritos sinistros precisam ser exorcizados, quando locais importantes devem ser guardados contra espionagem mágica e quando portais para outros planos de existência precisam ser selados. "},
@@ -101,7 +101,7 @@
       }, 
         "img":"/imgs_classes/mago.png"
     },
-    "Paladino":{
+    "paladino":{
       "descri":"Cavaleiros divinos com poderes vindos de entidades ou de um forte juramento, Paladinos podem ser o exemplo perfeito de herói ou de um terrível algoz por onde passarem, mas independente da forma, sempre serão lembrados por quem testemunhar seus poderes. Paladinos misturam o uso de armas e armaduras pesadas, montarias e poderes divinos advindos de um voto ou código de honra.",
        "arquetipo":{
         "1_":{"img":"/arquetipos/paladino1.svg","nome":"Juramento de Devoção", "text":"O Juramento de Devoção vincula um paladino aos mais sublimes ideias de justiça, virtude e ordem. Algumas vezes chamados de campeões, cavaleiros brancos ou guerreiros sagrados, esses paladinos atendem o ideal do cavaleiro na armadura brilhante, agindo com honra em busca de justiça e do bem maior. Eles se agarram aos mais altos padrões de conduta, e alguns, para o melhor ou para o pior, consideram que o resto do mundo deve ter os mesmos padrões. Muitos dos que fazem esse juramento são devotados aos deuses da lei e do bem e usam os dogmas de seus deuses como medida de sua devoção. Eles consideram os anjos – os perfeitos servos do bem – como seus ideais e incorporam imagens de asas angelicais em seus elmos ou brasões. "}, 
